@@ -12,6 +12,9 @@ return (
              <div className="footer-text-col-1">
                <p>Eindhoven's <span className="text-white">finest</span></p>
              </div>
+             <div className="footer-text-copyright">
+               <p>&copy;2020 Weather Hoven, All Rights Reserved.</p>
+             </div>
          </Col>
          <Col className="footer-col">
              <div className="footer-text-col-main">

@@ -1,6 +1,6 @@
 .logo{
-    font-family:  Vast Shadow; font-size: 30pt; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
-    filter:blur(1px);
+    font-family:  Vast Shadow; font-size: 30pt; font-style: normal; font-variant: normal; font-weight: 300; line-height: 26.4px;
+    filter:blur(1.5px);
     padding: 19px;
     padding-bottom: 80px;
     padding-left: 32px;
@@ -67,6 +67,15 @@
   padding-left:20px;
   font-family: Open Sans; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 600; line-height: 15.4px;
   color: #3a3939;
+}
+.footer-text-copyright{
+  font-size:10pt;
+  font-weight: 100;
+  padding-left:20px;
+  margin-top:65px;
+  color: #3a3939;
+  text-decoration: none;
+  filter:blur(0.5px);
 }
 .footer-text-col-main{
   font-size:15pt;
