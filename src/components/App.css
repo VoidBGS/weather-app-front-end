@@ -42,6 +42,17 @@
 }
 .linebreak{
     border: 2px solid #ffff;
+    width: 97%;
+}
+.prognosis-text{
+    font-size:40pt;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #764400;
+    padding: 20px;
+}
+.prognosis-box{
+  padding-bottom: 360px;
+  background-color: #ffffff;
 }
 ul {
     list-style-type: none;
