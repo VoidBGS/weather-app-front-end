@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Navigation from './Navigation'
 import Main from './Main'
+import News from './News'
 import Prognosis from './Prognosis'
 import { weatherData } from '../api/weatherData'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -24,6 +25,7 @@ const App = () => {
          <Navigation/>
           <Main/>
           <Prognosis/>
+          <News/>
     </Container>
     );
 }
