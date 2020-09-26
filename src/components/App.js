@@ -7,11 +7,16 @@ import { weatherData } from '../api/weatherData';
 
 const App = () => {
 
-    // const [weather, setWeather] = useState({});
-    // const setAPI = async ()=>{
-    // const data = await weatherData();
-    // setWeather(data);
-    //}
+    const [weather, setWeather] = useState({});
+    const setAPI = async ()=>{
+    const data = await weatherData();
+    setWeather(data);
+    }
+
+    //setAPI metoda ne bachka kakto trqbva, kato go viknesh i startirash servera request i response neshtata
+    //stavat prekaleno mnogo I tiq ot OpenWeatherAPI mi blokirat key-a za nqkvo vreme
+    //Zatova mislq da produlja s dizaina puk API-a ste go mislq nakraq.
+    //Ako iskash da go testvash polvai toq key - a0584d716e9b992064ad01890816506d
         return (
         <Container>
             <Navigation/>

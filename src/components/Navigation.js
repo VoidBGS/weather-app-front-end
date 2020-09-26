@@ -8,7 +8,7 @@ const Navigation = () =>{
              <h2 className="logo">Weather<br/>Hoven</h2>
          </div>
          <ul>
-           <li><a class="active" href="#weather">Weather</a></li>
+           <li><a href="#weather">Weather</a></li>
            <li><a href="#news">News</a></li>
            <li><a href="#photos">Photos</a></li>
            <li><a href="#forum">Forum</a></li>
