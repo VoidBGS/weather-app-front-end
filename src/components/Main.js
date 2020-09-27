@@ -1,24 +1,27 @@
-import React from "react"
+import React, {useContext} from "react"
+import Context from '../Context'
 
 const Main = () =>{
+    const {weather, callApi} = useContext(Context);
+    const {humidity, pressure, temp} = weather;
     return(
-        <div>
+        <div onLoad={callApi()}>
             <div className="city">
-                <flex className="city-flexbox">
+                <div className="city-flexbox">
                 <div className="degrees">
-                    <span>12&deg;C</span>
+                    <span>{Math.round(temp)}&deg;C</span>
                 </div>
                 <div className="city-name">
                     <span>Eindhoven</span>
                     <sup>NL</sup><br/><br/>
                     <span className="city-season">Autumn</span>
                 </div>
-                </flex>
-                <flex className="info-flexbox">
-                    <p>Humidity</p>
+                </div>
+                <div className="info-flexbox">
+                    <p>{humidity}</p>
                     <p>Wind</p>
                     <p>Slightly rainy</p>
-                </flex>
+            </div>
             </div>
             <hr className="linebreak"></hr>
             </div>

@@ -4,7 +4,7 @@ import { Row, Col } from 'react-bootstrap'
 const Footer = () => {
 return (
     <div className="footer-main">
-     <Row className="footer-row">
+     <Row className="footer-row pl-3">
         <Col className="footer-col">
              <div className="footer-logo">
                  Weather Hoven
