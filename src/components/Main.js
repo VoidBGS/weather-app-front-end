@@ -1,26 +1,33 @@
 import React, {useContext} from "react"
+import defineSeason from './functions/defineSeason'
 import Context from '../Context'
 
 const Main = () =>{
-    const {weather, callApi} = useContext(Context);
-    const {humidity, pressure, temp} = weather;
+    const {callApi, weather, temperature, wind, data} = useContext(Context);
+    const {humidity, pressure, temp} = temperature;
+    const {speed} = wind;
+    const {description, icon, main} = weather;
+    const {name} = data;
+
+
     return(
-        <div onLoad={callApi()}>
+        <div>
+            <button onClick={callApi}>Test API</button>
             <div className="city">
                 <div className="city-flexbox">
                 <div className="degrees">
                     <span>{Math.round(temp)}&deg;C</span>
                 </div>
                 <div className="city-name">
-                    <span>Eindhoven</span>
+                    <span>{name}</span>
                     <sup>NL</sup><br/><br/>
-                    <span className="city-season">Autumn</span>
+                    <span className="city-season">{defineSeason()}</span>
                 </div>
                 </div>
                 <div className="info-flexbox">
-                    <p>{humidity}</p>
-                    <p>Wind</p>
-                    <p>Slightly rainy</p>
+                    <p>Humidity: {humidity}%</p>
+                    <p>Wind: {speed} km/h</p>
+                    <p className="info-flexbox-description">{description}</p>
             </div>
             </div>
             <hr className="linebreak"></hr>
