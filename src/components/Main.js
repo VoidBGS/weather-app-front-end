@@ -1,15 +1,45 @@
-import React, {useContext} from "react"
+import React, {useState} from "react"
 import defineSeason from './functions/defineSeason'
-import Context from '../Context'
+import axios from 'axios';
 
 const Main = () =>{
-    const {currentWeather, weather, temperature, wind, data} = useContext(Context);
+
+
+    const [weather, setWeather] = useState({});
+    const [temperature, setTemperature] = useState({});
+    const [wind, setWind] = useState({});
+    const [data, setData] = useState({});
+    const [forecast, setForecast] = useState({});
+
+    const currentWeather = async () =>{
+        const API_KEY = 'a0584d716e9b992064ad01890816506d';
+        const URL = `https://api.openweathermap.org/data/2.5/weather?lat=51.441643&lon=5.478000&apikey=${API_KEY}&units=metric`;
+           
+           const request = axios.get(URL)
+           const response = await request;
+        
+           setWeather(response.data.weather[0]);
+           setTemperature(response.data.main);
+           setWind(response.data.wind);
+           setData(response.data);
+        }
+        const weatherForecast = async () =>{
+            const API_KEY = '1266751b2faa16b328461cfc57e7f4d8';
+            const URL = `https://api.openweathermap.org/data/2.5/forecast?lat=51.441643&lon=5.478000&apikey=${API_KEY}&units=metric`;
+               
+               const request = axios.get(URL)
+               const response = await request;
+            
+               setForecast(response.data.list[0].main);
+            }
+
     const {humidity, pressure, temp} = temperature;
     const {speed} = wind;
     const {description, icon, main} = weather;
     const {name} = data;
 
     return(
+        
         <div>
             <button onClick={currentWeather}>Get Data</button>
             {main && (<div className="city">

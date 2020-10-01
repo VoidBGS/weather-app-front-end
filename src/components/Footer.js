@@ -3,9 +3,9 @@ import { Row, Col } from 'react-bootstrap'
 
 const Footer = () => {
 return (
-    <div className="footer-main">
-     <Row className="footer-row pl-3">
-        <Col className="footer-col">
+    <div className="footer-main pr-3">
+     <Row>
+        <Col>
              <div className="footer-logo">
                  Weather Hoven
              </div>
@@ -16,7 +16,7 @@ return (
                <p>&copy;2020 Weather Hoven, All Rights Reserved.</p>
              </div>
          </Col>
-         <Col className="footer-col">
+         <Col>
              <div className="footer-text-col-main">
                  Explore
              </div>
@@ -33,7 +33,7 @@ return (
              <a href="#forum" className="footer-text-col-2">Forum</a>
              </div>
          </Col>
-         <Col className="footer-col">
+         <Col>
              <div className="footer-text-col-main">
                  Visit
              </div>
@@ -45,7 +45,7 @@ return (
                  <p>kristianlachev00@gmail.com</p>
              </div>
         </Col>
-         <Col className="footer-col">
+         <Col>
              <div className="footer-text-col-main">
                  Follow
                  </div>

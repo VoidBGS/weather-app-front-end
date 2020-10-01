@@ -1,6 +1,8 @@
 import React from 'react'
 import { Col, Row } from 'react-bootstrap'
-import Context from '../Context'
+import PrognosisDay1 from './PrognosisDay1'
+import PrognosisDay2 from './PrognosisDay2'
+import PrognosisDay3 from './PrognosisDay3'
 
 const Prognosis = () =>{
     return(
@@ -8,36 +10,9 @@ const Prognosis = () =>{
             <div className="weather-text"><p>3 Day Prognosis</p></div>
             <div className="pb-3">
             <Row className="pt-4 mb-5">
-            <Col>
-                 <div className="weather-box">
-                   <Col>
-                   <Row className="weather-box-day justify-content-center">Day</Row>
-                   <Row className="weather-box-date justify-content-center">Date</Row>
-                   <Row className="weather-box-icon justify-content-center mt-4"><img src="https://i.ibb.co/NNRVhpB/sunny.png"  style={{ width: '140px' }}></img></Row>
-                   <Row className="weather-box-temp justify-content-center mt-5">Min/Max</Row>
-                   </Col>
-                 </div>
-             </Col>
-             <Col>
-                <div className="weather-box">
-                   <Col>
-                   <Row className="weather-box-day justify-content-center">Day</Row>
-                   <Row className="weather-box-date justify-content-center">Date</Row>
-                   <Row className="weather-box-icon justify-content-center mt-4"><img src="https://i.ibb.co/NNRVhpB/sunny.png"  style={{ width: '140px' }}></img></Row>
-                   <Row className="weather-box-temp justify-content-center mt-5">Min/Max</Row>
-                   </Col>
-                </div>
-             </Col>
-             <Col>
-                <div className="weather-box">
-                   <Col>
-                   <Row className="weather-box-day justify-content-center">Day</Row>
-                   <Row className="weather-box-date justify-content-center">Date</Row>
-                   <Row className="weather-box-icon justify-content-center mt-4"><img src="https://i.ibb.co/NNRVhpB/sunny.png"  style={{ width: '140px' }}></img></Row>
-                   <Row className="weather-box-temp justify-content-center mt-5">Min/Max</Row>
-                   </Col>
-                </div>
-            </Col>
+               <PrognosisDay1/>
+               <PrognosisDay2/>
+               <PrognosisDay3/>
              </Row>
             </div>
             <hr className="linebreak"></hr>
