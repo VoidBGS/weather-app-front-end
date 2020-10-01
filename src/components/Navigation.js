@@ -4,7 +4,7 @@ import './App.css'
 const Navigation = () =>{
     return(
      <div>
-         <div>
+         <div className="navigation-flexbox">
              <h2 className="logo">Weather<br/>Hoven</h2>
          </div>
          <ul>

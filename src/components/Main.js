@@ -3,17 +3,16 @@ import defineSeason from './functions/defineSeason'
 import Context from '../Context'
 
 const Main = () =>{
-    const {callApi, weather, temperature, wind, data} = useContext(Context);
+    const {currentWeather, weather, temperature, wind, data} = useContext(Context);
     const {humidity, pressure, temp} = temperature;
     const {speed} = wind;
     const {description, icon, main} = weather;
     const {name} = data;
 
-
     return(
         <div>
-            <button onClick={callApi}>Test API</button>
-            <div className="city">
+            <button onClick={currentWeather}>Get Data</button>
+            {main && (<div className="city">
                 <div className="city-flexbox">
                 <div className="degrees">
                     <span>{Math.round(temp)}&deg;C</span>
@@ -30,6 +29,7 @@ const Main = () =>{
                     <p className="info-flexbox-description">{description}</p>
             </div>
             </div>
+            )}
             <hr className="linebreak"></hr>
             </div>
     )
