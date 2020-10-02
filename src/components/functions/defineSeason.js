@@ -1,7 +1,5 @@
-import React from 'react'
-
 function defineSeason(){
-    //         start     end
+    //         start    end
     //Winter - 1/12 	28/02
     //Spring - 1/03 	31/05 
     //Summer - 1/06 	31/08 
