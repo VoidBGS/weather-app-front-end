@@ -45,9 +45,9 @@ const Main = () =>{
                 </div>
                 </div>
                 <div className="info-flexbox">
-                    <p>Humidity: {humidity}%</p>
-                    <p>Wind: {speed} km/h</p>
-                    <p className="info-flexbox-description">{description}</p>
+                    <p><b>Humidity:</b> {humidity}%</p>
+                    <p><b>Wind:</b> {speed} km/h</p>
+                    <p className="info-flexbox-description"><b>{description}</b></p>
             </div>
             </div>
             )}
