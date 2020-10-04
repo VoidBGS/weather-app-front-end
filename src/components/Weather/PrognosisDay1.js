@@ -1,7 +1,7 @@
 import React from 'react'
 import { Col, Row } from 'react-bootstrap'
-import defineWeekDay from './functions/defineWeekDay'
-import defineDate from './functions/defineDate'
+import defineWeekDay from '../functions/defineWeekDay'
+import defineDate from '../functions/defineDate'
 
 const PrognosisDay1 = ({data}) =>{
     return(

@@ -1,5 +1,6 @@
 import React from 'react'
 import './App.css'
+import {Link, BrowserRouter as Router} from "react-router-dom";
 
 const Navigation = () =>{
     return(
@@ -8,10 +9,10 @@ const Navigation = () =>{
              <h2 className="logo">Weather<br/>Hoven</h2>
          </div>
          <ul>
-           <li><a href="#weather">Weather</a></li>
-           <li><a href="#news">News</a></li>
-           <li><a href="#photos">Photos</a></li>
-           <li><a href="#forum">Forum</a></li>
+           <li><Link to="/">Weather</Link></li>
+           <li><Link to="/News">News</Link></li>
+           <li><Link to="/Photos">Photos</Link></li>
+           <li><Link to="/Forum">Forum</Link></li>
          </ul>
      </div>
     )

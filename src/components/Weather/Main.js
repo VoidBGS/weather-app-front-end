@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import defineSeason from './functions/defineSeason'
+import defineSeason from '../functions/defineSeason'
 import axios from 'axios';
 
 const Main = () =>{
