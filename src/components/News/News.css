@@ -1,0 +1,20 @@
+.news-article{
+    background-color: #ffffff;
+    display: flex;
+    margin-left: 40px;
+    width: 1040px;
+    box-shadow: 0px 3px 9px #764400;
+}
+.news-title{
+    font-family: Signika Negative; font-size: 45pt; font-style: normal; font-variant: normal; font-weight: 350; line-height: 26.4px;
+    padding: 30px;
+    text-shadow: 2px 2px 4px #764400;
+    color: #ffffff;
+}
+.news-article-details{
+    display: flex;
+    font-size: 16pt;
+}
+.news-page{
+    background-color: #fbe20556;
+}
