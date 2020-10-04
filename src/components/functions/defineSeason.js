@@ -29,6 +29,7 @@ function defineSeason(){
         case '11':
             season = 'Autumn';
         break;
+        default: season = 'Summer';
     }
 
     return season;

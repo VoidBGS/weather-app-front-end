@@ -9,19 +9,19 @@ const News = () =>{
             <Row className="pt-4 mb-5">
                 <Col>
                     <div className="news-box">
-                    <Row className="news-box-icon justify-content-center mt-4"><img src="https://i.ibb.co/MnJZGXL/road.jpg"  style={{ width: '350px' }}></img></Row>
+                    <Row className="news-box-icon justify-content-center mt-4"><img src="https://i.ibb.co/MnJZGXL/road.jpg"  alt="Problem with loading" style={{ width: '350px' }}></img></Row>
                     <Row className="news-box-temp justify-content-center mt-5">News Story</Row>
                     </div>
                 </Col>
                 <Col>
                     <div className="news-box">
-                    <Row className="news-box-icon justify-content-center mt-4"><img src="https://i.ibb.co/MnJZGXL/road.jpg"  style={{ width: '350px' }}></img></Row>
+                    <Row className="news-box-icon justify-content-center mt-4"><img src="https://i.ibb.co/MnJZGXL/road.jpg"  alt="Problem with loading" style={{ width: '350px' }}></img></Row>
                     <Row className="news-box-temp justify-content-center mt-5">News Story</Row>
                     </div>
                 </Col>
                 <Col>
                     <div className="news-box">
-                    <Row className="news-box-icon justify-content-center mt-4"><img src="https://i.ibb.co/MnJZGXL/road.jpg"  style={{ width: '350px' }}></img></Row>
+                    <Row className="news-box-icon justify-content-center mt-4"><img src="https://i.ibb.co/MnJZGXL/road.jpg"  alt="Problem with loading" style={{ width: '350px' }}></img></Row>
                     <Row className="news-box-temp justify-content-center mt-5">News Story</Row>
                     </div>
                 </Col>

@@ -24,9 +24,9 @@ const Main = () =>{
            setData(response.data);
         }
 
-    const {humidity, pressure, temp} = temperature;
+    const {humidity, temp} = temperature;
     const {speed} = wind;
-    const {description, icon, main} = weather;
+    const {description, main} = weather;
     const {name} = data;
 
     return(

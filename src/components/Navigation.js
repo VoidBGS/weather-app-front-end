@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import {Link, BrowserRouter as Router} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 const Navigation = () =>{
     return(
@@ -12,7 +12,7 @@ const Navigation = () =>{
            <li><Link to="/">Weather</Link></li>
            <li><Link to="/News">News</Link></li>
            <li><Link to="/Photos">Photos</Link></li>
-           <li><Link to="/Forum">Forum</Link></li>
+           <li><Link to="/Forum"><strike>Forum</strike></Link></li>
          </ul>
      </div>
     )

@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Navigation from './Navigation'
 import Weather from './Weather/Weather'
 import News from './News/News'
+import Forum from './Forum/Forum'
+import Photos from './Photos/Photos'
 import Footer from './Footer'
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
@@ -19,6 +21,8 @@ const App = () => {
                 <Switch>
                 <Route path="/" exact component={Weather}/>
                 <Route path="/News" component={News}/>
+                <Route path="/Photos" component={Photos}/>
+                <Route path="/Forum" component={Forum}/>
                 </Switch>
                 </Container>
                 <Footer/>
