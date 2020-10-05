@@ -7,9 +7,7 @@ import axios from 'axios';
 
 const Prognosis = () =>{
 
-   const [day1, setDay1] = useState({});
-   const [day2, setDay2] = useState({});
-   const [day3, setDay3] = useState({});
+   const [forecast, setData] = useState({});
 
    //Every 8 points equals new day so - 8, 16, 24
    const weatherForecast = async () =>{
@@ -19,9 +17,7 @@ const Prognosis = () =>{
          const request = axios.get(URL)
          const response = await request;
          
-         setDay1(response.data.list[5]);
-         setDay2(response.data.list[13]);
-         setDay3(response.data.list[21]);
+         setData(response.data);
       }
 
     return(
@@ -30,9 +26,9 @@ const Prognosis = () =>{
             <button onClick={weatherForecast}>Get Data</button>
             <div className="pb-3">
             <Row className="pt-4 mb-5">
-               <PrognosisDay1 data={day1}/>
-               <PrognosisDay2 data={day2}/>
-               <PrognosisDay3 data={day3}/>
+               <PrognosisDay1 data={forecast}/>
+               <PrognosisDay2 data={forecast}/>
+               <PrognosisDay3 data={forecast}/>
              </Row>
             </div>
             <hr className="linebreak"></hr>

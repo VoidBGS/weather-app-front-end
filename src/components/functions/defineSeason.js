@@ -35,5 +35,4 @@ function defineSeason(){
     return season;
 }
 
-
 export default defineSeason;
