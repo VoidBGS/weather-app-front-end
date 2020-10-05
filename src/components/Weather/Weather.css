@@ -66,6 +66,12 @@
   color: #6b6b6bfa;
   font-size: 14pt;
 }
+.weather-box-temp-min{
+color: #0557b4;
+}
+.weather-box-temp-max{
+color: #f7741d
+}
 .news-box{
   padding-bottom: 60px;
   background-color: #ffffff;
