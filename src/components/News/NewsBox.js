@@ -15,7 +15,7 @@ const NewsBox = () =>{
                <h3 className="pt-3">Description</h3>
            </div>
            <div className="news-article-details ml-4 mt-5">
-              Posted On{"   "}|{"   "}Comments Count
+              Posted On<p className="px-2">|</p>Comments Count
            </div>
            </Col>
        </div>
