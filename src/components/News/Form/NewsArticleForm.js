@@ -1,12 +1,11 @@
 import React from 'react'
 import Container from 'react-bootstrap/Container'
-import NewsArticleTitle from './NewsArticleTitle'
+import NewsForm from './NewsForm'
 
 const NewsArticleForm = () =>{
     return(
    <Container>
-   <NewsArticleTitle/>
-   test
+   <NewsForm/>
    </Container>
     )
 }
