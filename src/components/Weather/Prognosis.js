@@ -11,7 +11,7 @@ const Prognosis = () =>{
 
    //Every 8 points equals new day so - 8, 16, 24
    const weatherForecast = async () =>{
-      const API_KEY = '1266751b2faa16b328461cfc57e7f4d8';
+      const API_KEY = '57f5b8e03524516c712854170083e9ad';
       const URL = `https://api.openweathermap.org/data/2.5/forecast?lat=51.441643&lon=5.478000&apikey=${API_KEY}&units=metric`;
          
          const request = axios.get(URL)

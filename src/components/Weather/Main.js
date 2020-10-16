@@ -12,7 +12,7 @@ const Main = () =>{
 
 
     const currentWeather = async () =>{
-        const API_KEY = 'a0584d716e9b992064ad01890816506d';
+        const API_KEY = '57f5b8e03524516c712854170083e9ad';
         const URL = `https://api.openweathermap.org/data/2.5/weather?lat=51.441643&lon=5.478000&apikey=${API_KEY}&units=metric`;
            
            const request = axios.get(URL)
