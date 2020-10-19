@@ -15,6 +15,17 @@
     display: flex;
     font-size: 16pt;
 }
+.news-article-details-row{
+    bottom: 0%;
+    position: absolute
+}
+.news-article-picture{
+    width: 365px;
+    height: 220px;
+}
+.news-article-background{
+    background-color: #fff;
+}
 .news-page{
-    background-color: #fbe20556;
+    background-color: #fff;
 }

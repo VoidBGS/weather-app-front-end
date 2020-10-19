@@ -1,26 +1,29 @@
 import React from 'react'
-import { Col } from 'react-bootstrap'
+import { Col, Row } from 'react-bootstrap'
 
-const NewsBox = () =>{
+const NewsBox = (article) =>{
     return(
-        <div>
-        <div className="pb-5">
+        <>
+        <div className="news-article-background pb-5">
         <div className="news-article">
            <Col-sm>
-           <img src="https://i.ibb.co/MnJZGXL/road.jpg"  alt="Problem with loading" style={{ width: '365px' }}></img>
+           <img src={article.articlePicture}  alt="Problem with loading" className="news-article-picture"></img>
            </Col-sm>
            <Col xs={6}>
+            <Row>
            <div className="news-article-content p-4">
-               <h2>Title</h2>
-               <h3 className="pt-3">Description</h3>
+               <p>{article.articleTitle}</p>
            </div>
-           <div className="news-article-details ml-4 mt-5">
-              Posted On<p className="px-2">|</p>Comments Count
+           </Row>
+           <Row md={{ span: 6, offset: 3 }} className="news-article-details-row p-4">
+           <div className="news-article-details">
+              {article.dateTimeCreated}<p className="px-2">|</p>Comments Count
            </div>
+           </Row>
            </Col>
        </div>
        </div>
-       </div>
+       </>
     )
 }
 

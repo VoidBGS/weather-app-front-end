@@ -41,7 +41,7 @@ const NewsForm = () => {
             console.log(response);
             setLoading(false)
           }).catch(function (error) {
-            console.log(error);
+            console.error(error);
           })
           console.log(res);
         }
@@ -53,7 +53,7 @@ const NewsForm = () => {
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
         <Form.Group>
         <Form.Label className="news-form-title pt-4">Title</Form.Label>
-        <Form.Control required size="lg" name="title" type="text" onChange={HandleInputChange} placeholder="The title of your article" minLength="10"/>
+        <Form.Control required size="lg" name="title" type="text" onChange={HandleInputChange} placeholder="The title of your article" minLength="10" maxLength="70"/>
         <Form.Control.Feedback type="invalid" className="feedback">Title is Empty!</Form.Control.Feedback>
         </Form.Group>
         <Form.Group controlId="exampleForm.ControlTextarea1">
