@@ -84,6 +84,26 @@
   padding-top: 30px;
   color: #3f3d3d;
 }
+.error-page-message{
+  padding:20px;
+  font-family: Open Sans; font-size: 24pt; font-style: normal; font-variant: normal; font-weight: 200; line-height: 40.4px;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px #764400;
+}
+.error-page-number{
+  filter:blur(1px);
+  font-family:  Open Sans; font-size: 60pt; font-style: normal; font-variant: normal; font-weight: 300; line-height: 26.4px;
+  color: #fff;
+  text-shadow: 2px 2px 4px #764400;
+}
+.error-page-text{
+  padding: 25px;
+  filter:blur(1px);
+  font-family:  Open Sans; font-size: 40pt; font-style: normal; font-variant: normal; font-weight: 300; line-height: 26.4px;
+  padding-top: 30px;
+  color: #fff;
+  text-shadow: 2px 2px 4px #764400;
+}
 ul {
     list-style-type: none;
     width: 95%;
@@ -107,6 +127,7 @@ ul {
     padding: 14px 30px;
     text-decoration: none;
   }
+
   
   li a:hover {
     color: black;
