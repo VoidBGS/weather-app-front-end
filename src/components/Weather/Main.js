@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import defineSeason from '../functions/defineSeason'
 import axios from 'axios';
 
@@ -12,7 +12,7 @@ const Main = () =>{
 
 
     const currentWeather = async () =>{
-        const API_KEY = '57f5b8e03524516c712854170083e9ad';
+        const API_KEY = '3eb784b45ba4acbd7f9a6ec8a4e06841';
         const URL = `https://api.openweathermap.org/data/2.5/weather?lat=51.441643&lon=5.478000&apikey=${API_KEY}&units=metric`;
            
            const request = axios.get(URL)
@@ -23,6 +23,9 @@ const Main = () =>{
            setWind(response.data.wind);
            setData(response.data);
         }
+        useEffect(() => {
+            currentWeather()
+          }, [data]);
 
     const {humidity, temp} = temperature;
     const {speed} = wind;
@@ -32,7 +35,6 @@ const Main = () =>{
     return(
         
         <div>
-            <button onClick={currentWeather}>Get Data</button>
             {main && (<div className="city">
                 <div className="city-flexbox">
                 <div className="degrees">
