@@ -4,7 +4,7 @@ import { Col, Row } from 'react-bootstrap'
 const NewsBox = (article) =>{
     return(
         <>
-        <div className="news-article-background pb-5">
+        {article && (<div className="news-article-background pb-5">
         <div className="news-article">
            <Col-sm>
            <img src={article.articlePicture}  alt="Problem with loading" className="news-article-picture"></img>
@@ -23,6 +23,7 @@ const NewsBox = (article) =>{
            </Col>
        </div>
        </div>
+        )}
        </>
     )
 }

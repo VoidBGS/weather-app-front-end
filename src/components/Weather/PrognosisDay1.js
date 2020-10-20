@@ -4,7 +4,6 @@ import defineWeekDay from '../functions/defineWeekDay'
 import defineDate from '../functions/defineDate'
 
 const PrognosisDay1 = ({data}) =>{
-  console.log(data);
     return(
     <Col>
       {data.list &&(<div className="weather-box">

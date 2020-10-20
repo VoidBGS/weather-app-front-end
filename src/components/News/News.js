@@ -1,29 +1,27 @@
 import React, {useState, useEffect} from 'react'
 import "./News.css"
 import NewsBox from './NewsBox'
-import axios from 'axios'
+import {getArticles} from './getArticles'
 import NewsTitle from './NewsTitle'
 import {Row, Col, Button} from 'react-bootstrap'
 
 const News = () =>{
-     const URL = "https://localhost:44356/api/NewsArticles"
      const [article, setArticle] = useState({})
-    
-     const getArticles = async () =>{
-        const response = await axios.get(URL).then(function (response){
-            let {data} = response;
-            setArticle(data)
-          }).catch(function (error) {
-            console.error(error);
-          })
-     }
+
+
+     const callAPI = async () =>{
+      const data = await getArticles();
+      setArticle(data.data);
+    }
+    useEffect(() => {
+      callAPI();
+      }, []);
+      console.log(article)
+
     let rows = [];
     for (var i = 0; i < article.length; i++) {
     rows.push(NewsBox(article[i]));
     }
-    useEffect(() => {
-        getArticles()
-      });
     return (
         <>
         <Row>

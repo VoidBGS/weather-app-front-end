@@ -12,7 +12,7 @@ const Main = () =>{
 
 
     const currentWeather = async () =>{
-        const API_KEY = '3eb784b45ba4acbd7f9a6ec8a4e06841';
+        const API_KEY = '1266751b2faa16b328461cfc57e7f4d8';
         const URL = `https://api.openweathermap.org/data/2.5/weather?lat=51.441643&lon=5.478000&apikey=${API_KEY}&units=metric`;
            
            const request = axios.get(URL)
@@ -23,9 +23,9 @@ const Main = () =>{
            setWind(response.data.wind);
            setData(response.data);
         }
-        useEffect(() => {
-            currentWeather()
-          }, [data]);
+        // useEffect(() => {
+        //     currentWeather()
+        //   }, []);
 
     const {humidity, temp} = temperature;
     const {speed} = wind;
@@ -35,6 +35,7 @@ const Main = () =>{
     return(
         
         <div>
+            <button onClick={currentWeather} value="Get Data">Get Data</button>
             {main && (<div className="city">
                 <div className="city-flexbox">
                 <div className="degrees">

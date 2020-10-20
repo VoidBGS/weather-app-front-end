@@ -12,7 +12,7 @@ const Prognosis = () =>{
  
    //Every 8 points equal a new day so - 8, 16, 24 a0584d716e9b992064ad01890816506d 
    const weatherForecast = async () =>{
-      const API_KEY = '3eb784b45ba4acbd7f9a6ec8a4e06841';
+      const API_KEY = '1266751b2faa16b328461cfc57e7f4d8';
       const URL = `https://api.openweathermap.org/data/2.5/forecast?lat=51.441643&lon=5.478000&apikey=${API_KEY}&units=metric`;
          
          const request = axios.get(URL)
@@ -20,12 +20,13 @@ const Prognosis = () =>{
          
          setData(response.data);
       }
-      useEffect(() => {
-         weatherForecast()
-       }, [forecast.data]);
+      // useEffect(() => {
+      //    weatherForecast()
+      //  }, []);
 
     return(
          <div>
+            <button onClick={weatherForecast} value="Get Data">Get Data</button>
             <div className="weather-text"><p>3-Day Prognosis</p></div>
             <div className="pb-3">
             <Row className="pt-4 mb-5">
