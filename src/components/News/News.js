@@ -10,13 +10,12 @@ const News = () =>{
 
 
      const callAPI = async () =>{
-      const data = await getArticles();
-      setArticle(data.data);
+      const {data} = await getArticles();
+      setArticle(data);
     }
     useEffect(() => {
-      callAPI();
+      // callAPI();
       }, []);
-      console.log(article)
 
     let rows = [];
     for (var i = 0; i < article.length; i++) {

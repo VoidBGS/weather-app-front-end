@@ -5,6 +5,7 @@ import Forum from './components/Forum/Forum'
 import Photos from './components/Photos/Photos'
 import NewsArticleForm from './components/News/Form/NewsArticleForm'
 import Navigation from './components/Navigation'
+import Article from './components/News/Article/Article'
 import ErrorPage from './ErrorPage'
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
@@ -16,6 +17,7 @@ const CreateRoutes = () =>{
     <Route path="/" exact component={Weather}/>
     <Route path="/News" exact component={News}/>
     <Route path="/News/Post" exact component={NewsArticleForm}/>
+    <Route path="/News/Article/1" component={Article}/>
     <Route path="/Photos" exact component={Photos}/>
     <Route path="/Forum" exact component={Forum}/>
     <Route component={ErrorPage} />
