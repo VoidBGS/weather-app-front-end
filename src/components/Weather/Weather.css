@@ -44,6 +44,7 @@
 }
 .weather-box{
   background-color: rgb(255, 255, 255);
+  padding-bottom: 40px;
   box-shadow: 0px 3px 9px #764400;
   font-family: Arial, Helvetica, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 350; line-height: 26.4px;
 }
@@ -89,4 +90,8 @@ color: #f7741d
   padding-bottom: 60px;
   background-color: #ffffff;
   box-shadow: 0px 3px 9px #764400;
+}
+.news-box:hover{
+  box-shadow: 0px 4px 14px #412602;
+  transition: box-shadow .4s ease-in-out;
 }

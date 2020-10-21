@@ -20,18 +20,20 @@ return (
              <div className="footer-text-col-main">
                  Explore
              </div>
-             <div>
-             <a href="/" className="footer-text-col-2">Weather</a>
-             </div>
-             <div>
-             <a href="/News" className="footer-text-col-2">News</a>
-             </div>
-             <div>
-             <a href="/Photos" className="footer-text-col-2">Photos</a>
-             </div>
-             <div>
-             <a href="/Forum" className="footer-text-col-2">Forum</a>
-             </div>
+             <ul className="footer-explore">
+             <li>
+             <a href="/">Weather</a>
+             </li>
+             <li>
+             <a href="/News">News</a>
+             </li>
+             <li>
+             <a href="/Photos">Photos</a>
+             </li>
+             <li>
+             <a href="/Forum">Forum</a>
+             </li>
+             </ul>
          </Col>
          <Col>
              <div className="footer-text-col-main">
@@ -47,14 +49,16 @@ return (
         </Col>
          <Col>
              <div className="footer-text-col-main">
-                 Follow
-                 </div>
-                 <div>
-             <a href="#facebook" className="footer-text-col-4">Facebook</a>
-             </div>
-             <div>
-             <a href="#instagram" className="footer-text-col-4">Instagram</a>
-             </div>
+            Follow
+            </div>
+            <ul className="footer-social-media">
+            <li>
+             <a href="#facebook">Facebook</a>
+             </li>
+             <li>
+             <a href="#instagram">Instagram</a>
+             </li>
+             </ul>
             </Col>
      </Row>
     </div>

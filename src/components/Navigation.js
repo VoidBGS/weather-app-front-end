@@ -8,11 +8,11 @@ const Navigation = () =>{
          <div className="navigation-flexbox">
              <h2 className="logo">Weather<br/>Hoven</h2>
          </div>
-         <ul>
-           <li><Link to="/">Weather</Link></li>
-           <li><Link to="/News">News</Link></li>
-           <li><Link to="/Photos">Photos</Link></li>
-           <li><Link to="/Forum"><strike>Forum</strike></Link></li>
+         <ul className="navigation-bar">
+           <li className="navigation-bar-list"><Link to="/">Weather</Link></li>
+           <li className="navigation-bar-list"><Link to="/News">News</Link></li>
+           <li className="navigation-bar-list"><Link to="/Photos">Photos</Link></li>
+           <li className="navigation-bar-list"><Link to="/Forum"><strike>Forum</strike></Link></li>
          </ul>
      </div>
     )
