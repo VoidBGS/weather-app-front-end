@@ -7,7 +7,7 @@ const News = () =>{
     const [articles, setArticles] = useState({});
 
     useEffect(() =>{
-        // fetchAPI();    
+        fetchAPI();    
     }, [])
 
     async function fetchAPI(){

@@ -5,6 +5,10 @@
     width: 1040px;
     box-shadow: 0px 3px 9px #764400;
 }
+.news-article:hover{
+    box-shadow: 0px 4px 14px #412602;
+    transition: box-shadow .2s ease-in-out;
+  }
 .news-title{
     font-family: Signika Negative; font-size: 45pt; font-style: normal; font-variant: normal; font-weight: 350; line-height: 26.4px;
     padding: 30px;
@@ -14,6 +18,7 @@
 .news-article-details{
     display: flex;
     font-size: 16pt;
+    color:#6b6b6bfa;
 }
 .news-article-details-row{
     bottom: 0%;
@@ -29,4 +34,8 @@
 .news-page{
     background-color: #fff;
     box-shadow: 0px 3px 9px #764400;
+}
+.news-page a{
+    text-decoration: none;
+    color: #000000
 }

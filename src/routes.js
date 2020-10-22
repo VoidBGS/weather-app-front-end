@@ -17,7 +17,7 @@ const CreateRoutes = () =>{
     <Route path="/" exact component={Weather}/>
     <Route path="/News" exact component={News}/>
     <Route path="/News/Post" exact component={NewsArticleForm}/>
-    <Route path="/News/Article/1" component={Article}/>
+    <Route path="/News/Article/:id" component={Article}/>
     <Route path="/Photos" exact component={Photos}/>
     <Route path="/Forum" exact component={Forum}/>
     <Route component={ErrorPage} />

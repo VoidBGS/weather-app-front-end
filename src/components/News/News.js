@@ -3,24 +3,21 @@ import "./News.css"
 import NewsBox from './NewsBox'
 import {getArticles} from './getArticles'
 import NewsTitle from './NewsTitle'
+import {Link} from "react-router-dom";
 import {Row, Col, Button} from 'react-bootstrap'
 
 const News = () =>{
-     const [article, setArticle] = useState({})
+  useEffect(() => {
+    callAPI();
+    }, []);
 
-
+     const [articles, setArticles] = useState([])
+     
      const callAPI = async () =>{
-      const {data} = await getArticles();
-      setArticle(data);
+      const {data}= await getArticles();
+      setArticles(data);
     }
-    useEffect(() => {
-      // callAPI();
-      }, []);
-
-    let rows = [];
-    for (var i = 0; i < article.length; i++) {
-    rows.push(NewsBox(article[i]));
-    }
+    
     return (
         <>
         <Row>
@@ -28,7 +25,11 @@ const News = () =>{
         <Col md={{offset: 3}}><Button variant="warning" size="lg" href="News/Post" className="news-form-button m-4 px-4">Post Article</Button></Col>
         </Row>
         <div className="news-page pt-4">
-         {rows}
+        { articles.map(article =>(
+         <div key={article.id}>
+           <Link to={`News/Article/${article.id}`} >{NewsBox(article)}</Link>
+           </div>
+        ))}
         </div>
         </>
     )
