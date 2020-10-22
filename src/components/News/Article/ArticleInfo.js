@@ -1,13 +1,14 @@
 import React from 'react'
 import {Row, Col} from 'react-bootstrap'
 
-const ArticleInfo = () =>{
+const ArticleInfo = ({article}) =>{
+
     return(
         <Row className="additional-info pb-4 pl-3">
             <Col className="pr-2" md={{ span:1.5 }}>
-                <p>Posted on</p>
+                <p>{article.article.dateTimeCreated}</p>
             </Col> | <Col className="pl-2" md={{ span:1.5 }}>
-                <p>Auhor</p>
+                <p>Author</p>
             </Col>
             <Col md={{ offset:7 }}>
                 <p>Credit Picture</p>
