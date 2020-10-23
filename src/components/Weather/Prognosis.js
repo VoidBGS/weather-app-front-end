@@ -27,7 +27,7 @@ const Prognosis = () =>{
     return(
          <div>
             <button onClick={weatherForecast} value="Get Data">Get Data</button>
-            <div className="weather-text"><p>3-Day Prognosis</p></div>
+            <Row className="weather-text"><p>3-Day Prognosis</p></Row>
             <div className="pb-3">
             <Row className="pt-4 mb-5">
                <PrognosisDay1 data={forecast}/>

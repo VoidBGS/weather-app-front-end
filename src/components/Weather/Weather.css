@@ -60,8 +60,17 @@
  color: #6b6b6bfa;
 }
 .news-box-picture{
-  width: fit-content;
+  width: 100%;
   height: 230px;
+}
+.news-box{
+  padding-bottom: 60px;
+  background-color: #ffffff;
+  box-shadow: 0px 3px 9px #764400;
+}
+.news-box:hover{
+  box-shadow: 0px 4px 14px #412602;
+  transition: box-shadow .4s ease-in-out;
 }
 .weather-box-items{
   justify-items: center;
@@ -85,13 +94,4 @@ color: #0557b4;
 }
 .weather-box-temp-max{
 color: #f7741d
-}
-.news-box{
-  padding-bottom: 60px;
-  background-color: #ffffff;
-  box-shadow: 0px 3px 9px #764400;
-}
-.news-box:hover{
-  box-shadow: 0px 4px 14px #412602;
-  transition: box-shadow .4s ease-in-out;
 }
