@@ -1,0 +1,19 @@
+.edit-form-title{
+    font-size: 26pt;
+    text-shadow: 2px 2px 4px #764400;
+    color: #ffffff;
+}
+.edit-form-content{
+    font-size: 26pt;
+    text-shadow: 2px 2px 4px #764400;
+    color: #ffffff;
+}
+.edit-form-picture{
+    font-size: 22pt;
+    text-shadow: 2px 2px 4px #764400;
+    color: #ffffff;
+}
+.edit-form-button{
+    background-color: #FBE205;
+    box-shadow: 0px 3px 9px #764400;
+}

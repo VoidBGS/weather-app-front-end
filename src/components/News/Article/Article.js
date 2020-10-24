@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import './Article.css'
-import {Col} from 'react-bootstrap'
+import {Col, Button} from 'react-bootstrap'
 import ArticleContent from './ArticleContent'
 import ArticleTop from './ArticleTop'
 import axios from 'axios'

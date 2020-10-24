@@ -30,7 +30,6 @@ const NewsForm = () => {
             ArticleTitle: formData.title,
             ArticleContent: formData.content,
             ArticlePicture: formData.image,
-            DateTimeCreated: "19-10-2020"
         });
           const res = await axios.post(URL, data, {
             headers: {
