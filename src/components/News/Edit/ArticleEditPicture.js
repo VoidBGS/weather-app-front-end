@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {Form} from 'react-bootstrap'
 
 const ArticleEditPicture = ({article}) =>{
+    //DEPRECIATED
     const [formPicture, setFormPicture] = useState(article.articlePicture)
     const HandleInputChange = (e) =>{
         setFormPicture(e.target.value);

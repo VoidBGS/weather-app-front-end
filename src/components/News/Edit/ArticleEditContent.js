@@ -2,6 +2,7 @@ import React, {useState}  from 'react'
 import {Form} from 'react-bootstrap'
 
 const ArticleEditContent = ({article}) =>{
+    //DEPRECIATED
     const [formContent, setFormContent] = useState(article.articleContent)
     const HandleInputChange = (e) =>{
         setFormContent(e.target.value);
