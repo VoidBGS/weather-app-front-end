@@ -13,7 +13,11 @@ const News = () =>{
     async function fetchAPI(){
         const {data} = await getArticles();
          
-        setArticles(data);
+        setArticles(reverseArticles(data));
+    }
+        
+    function reverseArticles(array){
+        return array.reverse()
     }
 
     const rows = [];

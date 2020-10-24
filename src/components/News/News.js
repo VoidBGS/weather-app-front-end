@@ -15,7 +15,12 @@ const News = () =>{
      
      const callAPI = async () =>{
       const {data}= await getArticles();
-      setArticles(data);
+      
+      setArticles(reverseArticles(data));
+    }
+
+    function reverseArticles(array){
+      return array.reverse()
     }
     
     return (
@@ -24,12 +29,14 @@ const News = () =>{
         <Col md={6}><NewsTitle/></Col>
         <Col md={{offset: 3}}><Button variant="warning" size="lg" href="News/Post" className="news-form-button m-4 px-4">Post Article</Button></Col>
         </Row>
-        <div className="news-page pt-4">
+        <div className="news-page pt-4 mb-5">
+        <div className="news-article-background pb-5">
         { articles.map(article =>(
-         <div key={article.id}>
+         <Row key={article.id}>
            <Link to={`News/Article/${article.id}`} >{NewsBox(article)}</Link>
-           </div>
+           </Row>
         ))}
+        </div>
         </div>
         </>
     )

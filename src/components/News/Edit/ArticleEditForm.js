@@ -3,6 +3,7 @@ import {Form, Button} from 'react-bootstrap'
 import axios from 'axios'
 import ErrorPage from '../../../ErrorPage'
 
+
 function ArticleEditContent({article}){
     const [validated, setValidated] = useState(false);
     const [isLoading, setLoading] = useState(false);
@@ -55,6 +56,7 @@ function ArticleEditContent({article}){
         ).then(function (response){
             console.log(response);
             setLoading(false)
+            window.location.replace('http://localhost:3000/News')
           }).catch(function (error) {
             console.error(error);
           })
@@ -82,8 +84,9 @@ function ArticleEditContent({article}){
             <Form.Label className="edit-form-content" >Upload An Image</Form.Label>
             <Form.Control required size="lg" name="image" type="text" value={formPicture || ""}  onChange={HandleInputChange} placeholder="The link to your article's image" minLength="10"/>
             </Form.Group>
-            <Button variant="warning" size="lg" type="submit" disabled={isLoading} onClick={!isLoading ? handleClick : null} block> {isLoading ? 'Loading…' : 'Save Changes'}</Button>
+            <Button variant="warning" size="lg" type="submit" disabled={isLoading} onClick={!isLoading ? handleClick : null} className="my-3" block> {isLoading ? 'Loading…' : 'Save Changes'}</Button>
             </Form>}
+
             </>
     )
 

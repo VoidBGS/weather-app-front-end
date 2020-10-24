@@ -10,7 +10,7 @@ const ArticleContent = ({article}) => {
         <ArticleInfo article={{article}}/>
         {article.articleContent}
         </div>
-        <Button variant="warning" size="lg" href={`${article.id}/Edit`} className="news-form-button my-4" block>Edit Article</Button>
+        <Button variant="warning" size="lg" href={`${article.id}/Edit`} className="news-form-button my-4" block>Article Settings</Button>
     </Row>
 )}
 

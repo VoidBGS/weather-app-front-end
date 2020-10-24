@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import './ArticleEdit.css'
 import axios from 'axios'
 import ArticleEditForm from './ArticleEditForm'
+import ArticleDeleteButton from  './ArticleDeleteButton'
 
 const ArticleEdit = ({match}) =>{
     useEffect(() => {
@@ -23,8 +24,13 @@ const ArticleEdit = ({match}) =>{
 
     return(
         <>
-          {article && (<ArticleEditForm article={article}/>)}
-        </>
+          {article && (
+          <>
+          <ArticleEditForm article={article}/>
+          <ArticleDeleteButton article={article}/>
+          </>
+          )}
+      </>
     )
 }
 
