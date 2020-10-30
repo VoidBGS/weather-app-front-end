@@ -3,7 +3,7 @@ import {Row, Col, Button} from 'react-bootstrap'
 
 const ErrorPage  = () =>{
     return(
-<Row className="pl-5">
+<Row className="pl-5"  data-testid="errorpage-test" >
     <Col md={{ span: 2}}>
     <p className="error-page-text">Error</p>
     <p className="error-page-number pl-3">404</p>

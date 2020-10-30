@@ -26,7 +26,7 @@ const Article = ({match}) =>{
    }
 
    return(
-    <Col md={{ span: 11, offset: 0.9 }} className="p-4 ml-5">
+    <Col md={{ span: 11, offset: 0.9 }} data-testid="article-test"  className="p-4 ml-5">
     <ArticleTop article={article}/>
     <ArticleContent article={article}/>
     </Col>
