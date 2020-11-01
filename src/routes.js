@@ -7,6 +7,8 @@ import NewsArticleForm from './components/News/Form/NewsArticleForm'
 import Navigation from './components/Navigation'
 import Article from './components/News/Article/Article'
 import ArticleEdit from './components/News/Edit/ArticleEdit'
+import Register from './components/Register/Register'
+import Login from './components/Login/Login'
 import ErrorPage from './ErrorPage'
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
@@ -20,6 +22,10 @@ const CreateRoutes = () =>{
     <Route path="/News" exact component={News}/>
     <Route path="/Photos" exact component={Photos}/>
     <Route path="/Forum" exact component={Forum}/>
+    
+    {/*Authentication Links*/}
+    <Route path="/Register" exact component={Register}/>
+    <Route path="/Login" exact component={Login}/>
 
     {/*News Articles*/}
     <Route path="/News/Post" exact component={NewsArticleForm}/>
