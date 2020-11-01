@@ -22,14 +22,19 @@ const Article = ({match}) =>{
       setArticle(response.data);
     }).catch(function (error) {
       console.error(error);
+      window.location.replace(`http://localhost:3000/NotFound`)
     })
    }
 
    return(
+    <>
+    {article.id && (
     <Col md={{ span: 11, offset: 0.9 }} data-testid="article-test"  className="p-4 ml-5">
     <ArticleTop article={article}/>
     <ArticleContent article={article}/>
     </Col>
+    )}
+    </>
     )
 }
 

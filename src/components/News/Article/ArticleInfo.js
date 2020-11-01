@@ -10,8 +10,8 @@ const ArticleInfo = ({article}) =>{
         </Col> | <Col className="pl-2" md={{ span:1.5 }}>
         <p>Author</p>
         </Col>
-        <Col md={{ offset:7 }}>
-        <p>Credit Picture</p>
+        <Col md={{ offset:4 }}>
+        <p>Picture: {article.article.articlePictureCredit}</p>
         </Col>
         </Row>
     )

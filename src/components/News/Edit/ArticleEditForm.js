@@ -11,13 +11,16 @@ function ArticleEditContent({article}){
     const [formTitle, setFormTitle] = useState(article.articleTitle)
     const [formContent, setFormContent] = useState(article.articleContent)
     const [formPicture, setFormPicture] = useState(article.articlePicture)
+    const [formPictureCredit, setFormPictureCredit] = useState(article.articlePictureCredit)
     const URL = `https://localhost:44356/api/NewsArticles/${ID}`
+
     useEffect(() => {
         setFormTitle(article.articleTitle)
         setFormContent(article.articleContent)
         setFormPicture(article.articlePicture)
+        setFormPictureCredit(article.articlePictureCredit)
         setID(article.id)
-        }, [article.id, article.articleTitle, article.articleContent, article.articlePicture]);
+        }, [article.id, article.articleTitle, article.articleContent, article.articlePicture, article.articlePictureCredit]);
 
     const HandleInputChange = (e) =>{
         if(e.target.name == "title"){
@@ -29,6 +32,9 @@ function ArticleEditContent({article}){
         if(e.target.name == "image"){
             setFormPicture(e.target.value)
         }
+        if(e.target.name == "credit"){
+          setFormPictureCredit(e.target.value)
+      }
       }
 
       const handleClick = () => setLoading(true);
@@ -47,6 +53,7 @@ function ArticleEditContent({article}){
             ArticleTitle: formTitle,
             ArticleContent: formContent,
             ArticlePicture: formPicture,
+            ArticlePictureCredit: formPictureCredit,
         });
           const res = await axios.put(URL, data, {
             headers: {
@@ -56,7 +63,7 @@ function ArticleEditContent({article}){
         ).then(function (response){
             console.log(response);
             setLoading(false)
-            window.location.replace('http://localhost:3000/News')
+            window.location.replace(`http://localhost:3000/News/Article/${ID}`)
           }).catch(function (error) {
             console.error(error);
           })
@@ -84,7 +91,11 @@ function ArticleEditContent({article}){
             <Form.Label className="edit-form-content" >Upload An Image</Form.Label>
             <Form.Control required size="lg" name="image" type="text" value={formPicture || ""}  onChange={HandleInputChange} placeholder="The link to your article's image" minLength="10"/>
             </Form.Group>
-            <Button variant="warning" size="lg" type="submit" disabled={isLoading} onClick={!isLoading ? handleClick : null} className="my-3" block> {isLoading ? 'Loading…' : 'Save Changes'}</Button>
+            <Form.Group>
+            <Form.Label className="edit-form-content" >Image Credit</Form.Label>
+            <Form.Control required size="lg" name="credit" type="text" value={formPictureCredit || ""}  onChange={HandleInputChange} placeholder="The link to your article's image" minLength="10"/>
+            </Form.Group>
+            <Button variant="warning" size="md" type="submit" disabled={isLoading} onClick={!isLoading ? handleClick : null} className="my-2" block> {isLoading ? 'Loading…' : 'Save Changes'}</Button>
             </Form>}
 
             </>

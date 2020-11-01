@@ -17,7 +17,10 @@ const NewsBox = (article) =>{
            </Row>
            <Row md={{ span: 6, offset: 3 }} className="news-article-details-row p-4">
            <div className="news-article-details">
-              {article.dateTimeCreated}<p className="px-2"></p>
+           <p className="px-2">{article.dateTimeCreated}</p> -
+           </div>
+           <div className="news-article-details">
+             <p className="px-2">Author</p>
            </div>
            </Row>
            </Col>

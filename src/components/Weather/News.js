@@ -29,7 +29,7 @@ const News = () =>{
     return(
          <div>
             <Row className="weather-text"><p>Weather News</p></Row>
-            <Row className="pb-3">
+            <Row className="pb-5">
              {rows}
             </Row>
          </div>

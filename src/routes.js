@@ -24,7 +24,7 @@ const CreateRoutes = () =>{
     {/*News Articles*/}
     <Route path="/News/Post" exact component={NewsArticleForm}/>
     <Route path="/News/Article/:id/Edit" exact component={ArticleEdit}/>
-    <Route path="/News/Article/:id" exact component={Article}/>
+    <Route path="/News/Article/:id" component={Article}/>
 
     {/*Error Handling*/}
     <Route component={ErrorPage} />
