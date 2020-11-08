@@ -33,7 +33,7 @@ const CreateRoutes = () =>{
     <Route path="/News/Article/:id" component={Article}/>
 
     {/*Error Handling*/}
-    <Route component={ErrorPage} />
+    <Route component={ErrorPage}/>
     </Switch>
     </Router>
     )
