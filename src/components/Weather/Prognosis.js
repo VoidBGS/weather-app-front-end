@@ -29,7 +29,7 @@ const Prognosis = () =>{
             <button onClick={weatherForecast} value="Get Data">Get Data</button>
             <Row className="weather-text"><p>3-Day Prognosis</p></Row>
             <div className="pb-3">
-            <Row className="pt-4 mb-5">
+            <Row className="weather-box-wrapper pt-4 mb-5">
                <PrognosisDay1 data={forecast}/>
                <PrognosisDay2 data={forecast}/>
                <PrognosisDay3 data={forecast}/>

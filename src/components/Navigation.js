@@ -1,6 +1,8 @@
 import React from 'react'
 import './App.css'
 import {Link} from "react-router-dom";
+import {Navbar, Nav} from 'react-bootstrap'
+import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse';
 
 const Navigation = () =>{
     return(
@@ -8,12 +10,17 @@ const Navigation = () =>{
          <div className="navigation-flexbox">
              <h2 className="logo">Weather<br/>Hoven</h2>
          </div>
-         <ul className="navigation-bar">
-           <li className="navigation-bar-list"><Link to="/">Weather</Link></li>
-           <li className="navigation-bar-list"><Link to="/News">News</Link></li>
-           <li className="navigation-bar-list"><Link to="/Photos">Photos</Link></li>
-           <li className="navigation-bar-list"><Link to="/Forum"><strike>Forum</strike></Link></li>
-         </ul>
+         <Navbar expand="lg">
+         <Navbar.Toggle aria-controls="basic-navbar-nav" />
+         <Navbar.Collapse name="navigation-bar">
+         <Nav  className="navigation-bar mr-auto">
+           <Nav.Link className="navigation-bar-list"><Link to="/">Weather</Link></Nav.Link>
+           <Nav.Link className="navigation-bar-list"><Link to="/News">News</Link></Nav.Link>
+           <Nav.Link className="navigation-bar-list"><Link to="/Photos">Photos</Link></Nav.Link>
+           <Nav.Link className="navigation-bar-list"><Link to="/Forum"><strike>Forum</strike></Link></Nav.Link>
+        </Nav>
+        </Navbar.Collapse>
+         </Navbar>
      </div>
     )
 }

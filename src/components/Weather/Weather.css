@@ -37,7 +37,7 @@
 }
 
 .weather-text{
-    font-size:40pt;
+    font-size:3rem;
     color: #ffffff;
     text-shadow: 2px 2px 4px #764400;
     padding: 20px;
@@ -68,6 +68,9 @@
   background-color: #ffffff;
   box-shadow: 0px 3px 9px #764400;
 }
+.news-box-wrap{
+  flex-wrap: wrap;
+}
 .news-box:hover{
   box-shadow: 0px 4px 14px #412602;
   transition: box-shadow .4s ease-in-out;
@@ -94,4 +97,13 @@ color: #0557b4;
 }
 .weather-box-temp-max{
 color: #f7741d
+}
+
+@media only screen and (max-width: 1000px) {
+  .weather-box-wrapper{
+    justify-content: center;
+    }
+    .news-box-wrap{
+    justify-content: center;
+    }
 }

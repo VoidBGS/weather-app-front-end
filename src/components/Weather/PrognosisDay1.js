@@ -5,7 +5,7 @@ import defineDate from '../functions/defineDate'
 
 const PrognosisDay1 = ({data}) =>{
     return(
-    <Col className="weather-box mx-3">
+    <Col xs={9} sm={9} lg={{ }} className="weather-box mx-3 my-3">
       {data.list &&(
         <>
         <Row className="weather-box-day justify-content-center pb-2">{defineWeekDay(1)}</Row>

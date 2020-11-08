@@ -5,7 +5,7 @@ const Footer = () => {
 return (
     <div className="footer-main pr-3">
      <Row>
-        <Col>
+        <Col  xs={9} sm={9} md={6} lg={{ }}>
              <div className="footer-logo">
                  Weather Hoven
              </div>
@@ -16,7 +16,7 @@ return (
                <p>&copy;2020 Weather Hoven, All Rights Reserved.</p>
              </div>
          </Col>
-         <Col>
+         <Col xs={9} sm={9} md={6} lg={{ }}>
              <div className="footer-text-col-main">
                  Explore
              </div>
@@ -35,7 +35,7 @@ return (
              </li>
              </ul>
          </Col>
-         <Col>
+         <Col xs={9} sm={9} md={6} lg={{ }}>
              <div className="footer-text-col-main">
                  Visit
              </div>
@@ -47,7 +47,7 @@ return (
                  <p>kristianlachev00@gmail.com</p>
              </div>
         </Col>
-         <Col>
+         <Col xs={9} sm={9} md={6} lg={{ }}>
              <div className="footer-text-col-main">
             Follow
             </div>

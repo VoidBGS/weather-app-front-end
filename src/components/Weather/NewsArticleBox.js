@@ -9,7 +9,7 @@ const NewsArticleBox = (article) =>{
     <>
         {article &&(
             
-        <Col className="news-box mx-3" >
+        <Col xs={9} sm={9} lg={{ }} className="news-box mx-3 my-3" >
          <Link to={`News/Article/${article.id}`} style={{ textDecoration: 'none' }}>
         <Row className="justify-content-center"><img src={article.articlePicture} className="news-box-picture"></img></Row>
         <Row className="news-box-title"><p>{article.articleTitle}</p></Row>
