@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react"
 import defineSeason from '../functions/defineSeason'
 import axios from 'axios';
+import {Row, Col} from 'react-bootstrap'
 
 const Main = () =>{
 
@@ -33,29 +34,31 @@ const Main = () =>{
     const {name} = data;
 
     return(
-        
-        <div>
+        <>
             <button onClick={currentWeather} value="Get Data">Get Data</button>
-            {main && (<div className="city">
-                <div className="city-flexbox">
-                <div className="degrees">
+            {main && (
+            <Row>
+            <Col xs={9} sm={9} md={6} lg={{ }} className="city">
+                <Row className="city-flexbox">
+                <Col className="degrees ml-2">
                     <span>{Math.round(temp)}&deg;C</span>
-                </div>
-                <div className="city-name">
+                </Col>
+                <Col  lg={{ offset:2}} className="city-name">
                     <span>{name}</span>
                     <sup>NL</sup><br/><br/>
                     <span className="city-season">{defineSeason()}</span>
-                </div>
-                </div>
-                <div className="info-flexbox">
+                </Col>
+                </Row>
+                <Row className="info-flexbox mx-3">
                     <p><b>Humidity:</b> {humidity}%</p>
                     <p><b>Wind:</b> {speed} km/h</p>
                     <p className="info-flexbox-description"><b>{description}</b></p>
-            </div>
-            </div>
+                </Row>
+            </Col>
+            </Row>
             )}
             <hr className="linebreak"></hr>
-            </div>
+            </>
     )
 }
 

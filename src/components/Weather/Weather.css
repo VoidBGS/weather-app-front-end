@@ -28,6 +28,7 @@
     color: #ffffff;
     padding-bottom: 50px;
     padding-left: 20px;
+    line-height: 40px;
     margin-top: -30px;
     text-shadow: 2px 2px 4px #764400;
 }
@@ -41,6 +42,7 @@
     color: #ffffff;
     text-shadow: 2px 2px 4px #764400;
     padding: 20px;
+    line-height: 40px;
 }
 .weather-box{
   background-color: #ffffff;
@@ -106,4 +108,15 @@ color: #f7741d
     .news-box-wrap{
     justify-content: center;
     }
+    .city-name{
+      font-size:40pt;
+      margin-top: -50px;
+      margin-left: 3vh;
+      padding-top: 20vh;
+      padding-bottom: 5vh;
+    }
+    .city-season{
+      font-size:30pt;
+      margin-left: 0px;
+  }
 }
