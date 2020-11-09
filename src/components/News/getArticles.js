@@ -6,6 +6,7 @@ const URL = "https://localhost:44356/api/NewsArticles"
             return response;
           }).catch(function (error) {
             console.error(error);
+            return [];
           })
          return data;
      }

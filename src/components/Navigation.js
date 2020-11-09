@@ -13,7 +13,7 @@ const Navigation = () =>{
          <Navbar expand="lg">
          <Navbar.Toggle aria-controls="basic-navbar-nav" />
          <Navbar.Collapse name="navigation-bar">
-         <Nav  className="navigation-bar mr-auto">
+         <Nav className="navigation-bar mr-auto">
            <Nav.Link className="navigation-bar-list"><Link to="/">Weather</Link></Nav.Link>
            <Nav.Link className="navigation-bar-list"><Link to="/News">News</Link></Nav.Link>
            <Nav.Link className="navigation-bar-list"><Link to="/Photos">Photos</Link></Nav.Link>

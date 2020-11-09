@@ -12,8 +12,8 @@ const News = () =>{
 
     async function fetchAPI(){
         const {data} = await getArticles();
-         
-        setArticles(reverseArticles(data));
+        if(data != undefined){
+        setArticles(reverseArticles(data));}
     }
         
     function reverseArticles(array){
@@ -29,9 +29,11 @@ const News = () =>{
     return(
          <div>
             <Row className="weather-text"><p>Weather News</p></Row>
+            {articles && (
             <Row className="news-box-wrap pb-5">
              {rows}
             </Row>
+            )}
          </div>
     )
 }
