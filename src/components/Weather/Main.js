@@ -38,7 +38,7 @@ const Main = () =>{
             <button onClick={currentWeather} value="Get Data">Get Data</button>
             {main && (
             <Row>
-            <Col xs={9} sm={9} md={6} lg={{ }} className="city">
+            <Col xs={9} sm={9} md={6} lg={{ }} className="city ml-4">
                 <Row className="city-flexbox">
                 <Col className="degrees ml-2">
                     <span>{Math.round(temp)}&deg;C</span>

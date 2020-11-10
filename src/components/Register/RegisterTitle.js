@@ -3,7 +3,7 @@ import {Row} from 'react-bootstrap'
 
 const RegisterTitle = () =>{
     return(
-        <Row className="justify-content-center"><p className="register-title pt-5">Sign Up</p></Row>
+        <Row className="justify-content-center"><p className="register-title pt-5 pb-4">Sign Up</p></Row>
     )
 }
 
