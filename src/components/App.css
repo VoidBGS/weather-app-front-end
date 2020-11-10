@@ -6,6 +6,30 @@
     padding-left: 32px;
     margin-top: 10px;
 }
+.sign-in{
+  font-family: Open Sans; font-size: 20pt; font-style: normal; font-variant: normal; font-weight: 200; line-height: 40.4px;
+  text-shadow: 2px 2px 4px #764400;
+}
+.sign-in a{
+  color: #ffffff;
+  text-decoration: none;
+}
+.sign-in a:hover{
+  color: #0F0E0B;
+  text-decoration: none;
+}
+.sign-up{
+  font-family: Open Sans; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: 100; line-height: 10.4px;
+  text-shadow: 2px 2px 4px #764400;
+}
+.sign-up a{
+  color: #ffffff;
+  text-decoration: none;
+}
+.sign-up a:hover{
+  color: #0F0E0B;
+  text-decoration: none;
+}
 .navigation-flexbox{
   display: flex;
 }
@@ -135,6 +159,7 @@
   box-shadow: 0px 3px 9px #764400;
   margin: 1;
   padding: 0;
+  border-radius: 4px;
   overflow: hidden;
   background-color: #FBE205;
 }

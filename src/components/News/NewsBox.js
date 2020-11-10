@@ -5,14 +5,14 @@ const NewsBox = (article) =>{
     return(
         <>
         {article && (
-        <Row className="news-article mb-5">
+           <Row className="news-article m-5 ">
            <Col-sm>
            <img src={article.articlePicture}  alt="Problem with loading" className="news-article-picture"></img>
            </Col-sm>
-           <Col xs={6}>
-            <Row>
+           <Col>
+            <Row className="news-article-content-row">
            <div className="news-article-content p-4">
-               <p>{article.articleTitle}</p>
+           <p className="px-2">{article.articleTitle}</p> 
            </div>
            </Row>
            <Row md={{ span: 6, offset: 3 }} className="news-article-details-row p-4">
@@ -24,7 +24,7 @@ const NewsBox = (article) =>{
            </div>
            </Row>
            </Col>
-       </Row>
+           </Row>
         )}
        </>
     )

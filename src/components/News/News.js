@@ -26,19 +26,17 @@ const News = () =>{
     return (
         <>
         <Row>
-        <Col md={6}><NewsTitle/></Col>
-        <Col md={{offset: 3}}><Button variant="warning" size="lg" href="News/Post" className="news-form-button m-4 px-4">Post Article</Button></Col>
+        <Col ><NewsTitle/></Col>
         </Row>
         {articles && (
-        <div className="news-page pt-4 mb-5">
-        <div className="news-article-background pb-5">
+        <Col className="news-article-background py-4 my-4">
+        <Button variant="warning" size="lg" href="News/Post" className="news-button ml-5">Post Article</Button>
         { articles.map(article =>(
-         <Row key={article.id}>
-           <Link to={`News/Article/${article.id}`} >{NewsBox(article)}</Link>
-           </Row>
+         <div key={article.id}>
+          <Link to={`News/Article/${article.id}`}>{NewsBox(article)}</Link>
+          </div>
         ))}
-        </div>
-        </div>)}
+        </Col>)}
         </>
     )
 }

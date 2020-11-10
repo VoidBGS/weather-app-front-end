@@ -65,6 +65,7 @@ const NewsForm = () => {
         <Form.Group>
         <Form.Label className="news-form-content" >Upload An Image</Form.Label>
         <Form.Control required size="lg" name="image" type="text" onChange={HandleInputChange} placeholder="The link to your article's image" minLength="10"/>
+        <Form.Control.Feedback type="invalid" className="feedback">Your Article needs a picture!</Form.Control.Feedback>
         </Form.Group>
         <Form.Group>
         <Form.Label className="news-form-credit pt-2">Picture Credit</Form.Label>
