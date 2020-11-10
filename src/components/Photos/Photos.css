@@ -9,3 +9,11 @@
     width: fit-content;
     background-color: #ffffff;
 }
+@media only screen and (max-width: 760px) {
+    .photos-title{
+        font-family: Signika Negative; font-size: 35pt; font-style: normal; font-variant: normal; font-weight: 350; line-height: 50.4px;
+        padding: 30px;
+        text-shadow: 2px 2px 4px #764400;
+        color: #ffffff;
+    }
+}
