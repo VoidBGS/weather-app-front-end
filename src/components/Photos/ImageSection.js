@@ -5,9 +5,9 @@ import ImageBox from './ImageBox'
 const ImageSection = () =>{
     return(
         <Row>
-            <ImageBox/>
-            <ImageBox/>
-            <ImageBox/>
+            <ImageBox />
+            <ImageBox />
+            <ImageBox />
         </Row>
     )
 }

@@ -10,11 +10,11 @@ const App = () => {
 
     //Ako iskash da go testvash polvai toq key - a0584d716e9b992064ad01890816506d
         return (
-    <div>
-             <Main/>
-             <Prognosis/>
-            <News/>
-    </div>
+            <div>
+                <Main />
+                <Prognosis />
+                <News />
+            </div>
     );
 }
 

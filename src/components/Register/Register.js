@@ -7,10 +7,10 @@ import {Container} from 'react-bootstrap'
 const Register = () =>{
 
     return (
-       <Container>
-       <RegisterTitle/>
-       <RegisterForm/>
-       </Container>
+        <Container>
+            <RegisterTitle />
+            <RegisterForm />
+        </Container>
     )
 }
 

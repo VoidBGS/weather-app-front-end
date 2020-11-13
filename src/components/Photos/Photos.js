@@ -6,9 +6,9 @@ import ImageSection from './ImageSection'
 const Photos = () =>{
     return(
         <div>
-        <PhotosTitle/>
-       <ImageSection/>
-       <ImageSection/>
+            <PhotosTitle />
+            <ImageSection />
+            <ImageSection />
         </div>
     )
 }

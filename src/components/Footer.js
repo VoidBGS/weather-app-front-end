@@ -21,19 +21,19 @@ return (
                  Explore
              </div>
              <ul className="footer-explore">
-             <li>
-             <a href="/">Weather</a>
-             </li>
-             <li>
-             <a href="/News">News</a>
-             </li>
-             <li>
-             <a href="/Photos">Photos</a>
-             </li>
-             <li>
-             <a href="/Forum">Forum</a>
-             </li>
-             </ul>
+                   <li>
+                        <a href="/">Weather</a>
+                   </li>
+                   <li>
+                         <a href="/News">News</a>
+                   </li>
+                   <li>
+                           <a href="/Photos">Photos</a>
+                   </li>
+                   <li>
+                         <a href="/Forum">Forum</a>
+                   </li>
+              </ul>
          </Col>
          <Col xs={9} sm={9} md={6} lg={{ }}>
              <div className="footer-text-col-main">

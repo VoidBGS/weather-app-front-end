@@ -14,28 +14,28 @@ import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 const CreateRoutes = () =>{
     return(
-    <Router>
-    <Navigation/>
-    <Switch>
-    {/*General Links*/}
-    <Route path="/" exact component={Weather}/>
-    <Route path="/News" exact component={News}/>
-    <Route path="/Photos" exact component={Photos}/>
-    <Route path="/Forum" exact component={Forum}/>
-    
-    {/*Authentication Links*/}
-    <Route path="/Register" exact component={Register}/>
-    <Route path="/Login" exact component={Login}/>
+        <Router>
+            <Navigation />
+            <Switch>
+                {/*General Links*/}
+                <Route path="/" exact component={Weather} />
+                <Route path="/News" exact component={News} />
+                <Route path="/Photos" exact component={Photos} />
+                <Route path="/Forum" exact component={Forum} />
 
-    {/*News Articles*/}
-    <Route path="/News/Post" exact component={NewsArticleForm}/>
-    <Route path="/News/Article/:id/Edit" exact component={ArticleEdit}/>
-    <Route path="/News/Article/:id" component={Article}/>
+                {/*Authentication Links*/}
+                <Route path="/Register" exact component={Register} />
+                <Route path="/Login" exact component={Login} />
 
-    {/*Error Handling*/}
-    <Route component={ErrorPage}/>
-    </Switch>
-    </Router>
+                {/*News Articles*/}
+                <Route path="/News/Post" exact component={NewsArticleForm} />
+                <Route path="/News/Article/:id/Edit" exact component={ArticleEdit} />
+                <Route path="/News/Article/:id" component={Article} />
+
+                {/*Error Handling*/}
+                <Route component={ErrorPage} />
+            </Switch>
+        </Router>
     )
     };
 

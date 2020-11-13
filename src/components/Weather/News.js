@@ -21,20 +21,21 @@ const News = () =>{
     }
 
     const rows = [];
-
+    //Change the backend to return a number of articles.
+    //Add Array.map instead of printing our rows
     for (var i = 0; i < 3; i++) {
-       rows.push(NewsArticleBox(articles[i]));
+       rows.push(articles[i]);
     }
 
     return(
-         <div>
+        <div>
             <Row className="weather-text"><p>Weather News</p></Row>
             {articles && (
-            <Row className="news-box-wrap pb-5">
-             {rows}
-            </Row>
+                <Row className="news-box-wrap pb-5">
+                    {rows.map(NewsArticleBox)}
+                </Row>
             )}
-         </div>
+        </div>
     )
 }
 

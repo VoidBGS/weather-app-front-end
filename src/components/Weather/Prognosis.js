@@ -20,23 +20,23 @@ const Prognosis = () =>{
          
          setData(response.data);
       }
-      // useEffect(() => {
-      //    weatherForecast()
-      //  }, []);
-
+      useEffect(() => {
+         weatherForecast()
+       }, []);
+//            <button onClick={weatherForecast} value="Get Data">Get Data</button>
     return(
-         <div>
-            <button onClick={weatherForecast} value="Get Data">Get Data</button>
-            <Row className="weather-text"><p>3-Day Prognosis</p></Row>
-            <div className="pb-3">
-            <Row className="weather-box-wrapper pt-4 mb-5">
-               <PrognosisDay1 data={forecast}/>
-               <PrognosisDay2 data={forecast}/>
-               <PrognosisDay3 data={forecast}/>
+       <div>
+
+          <Row className="weather-text"><p>3-Day Prognosis</p></Row>
+          <div className="pb-3">
+             <Row className="weather-box-wrapper pt-4 mb-5">
+                <PrognosisDay1 data={forecast} />
+                <PrognosisDay2 data={forecast} />
+                <PrognosisDay3 data={forecast} />
              </Row>
-            </div>
-            <hr className="linebreak"></hr>
-         </div>
+          </div>
+          <hr className="linebreak"></hr>
+       </div>
     )
 }
 

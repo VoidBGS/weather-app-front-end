@@ -7,8 +7,8 @@ import {Container} from 'react-bootstrap'
 const Login = () =>{
     return (
         <Container>
-        <LoginTitle/>
-        <LoginForm/>
+            <LoginTitle />
+            <LoginForm />
         </Container>
     )
 }

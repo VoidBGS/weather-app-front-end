@@ -23,13 +23,13 @@ const ArticleEdit = ({match}) =>{
        }
 
     return(
-        <>
-          {article && (
+      <>
+        {article && (
           <>
-          <ArticleEditForm article={article}/>
-          <ArticleDeleteButton article={article}/>
+            <ArticleEditForm article={article} />
+            <ArticleDeleteButton article={article} />
           </>
-          )}
+        )}
       </>
     )
 }

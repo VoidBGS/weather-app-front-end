@@ -23,22 +23,21 @@ const News = () =>{
       return array.reverse()
     }
     
-    return (
-        <>
+    return articles ? (
+      <>
         <Row>
-        <Col ><NewsTitle/></Col>
+          <Col ><NewsTitle /></Col>
         </Row>
-        {articles && (
         <Col className="news-article-background py-4 my-4">
-        <Button variant="warning" size="lg" href="News/Post" className="news-button ml-5">Post Article</Button>
-        { articles.map(article =>(
-         <div key={article.id}>
-          <Link to={`News/Article/${article.id}`}>{NewsBox(article)}</Link>
-          </div>
-        ))}
-        </Col>)}
-        </>
-    )
+          <Button variant="warning" size="lg" href="News/Post" className="news-button ml-5">Post Article</Button>
+          {articles.map(article => (
+            <div key={article.id}>
+              <Link to={`News/Article/${article.id}`}>{NewsBox(article)}</Link>
+            </div>
+          ))}
+        </Col>
+      </>
+    ) : null
 }
 
 export default News;

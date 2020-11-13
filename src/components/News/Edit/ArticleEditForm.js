@@ -74,33 +74,32 @@ function ArticleEditContent({article}){
             
 
     return(
-        <>
-        {article.id === undefined ? <ErrorPage/> :
-            <Form noValidate validated={validated} onSubmit={handleSubmit}>
-            <Form.Group>
+    <>
+      {article.id === undefined ? <ErrorPage /> :
+        <Form noValidate validated={validated} onSubmit={handleSubmit}>
+          <Form.Group>
             <Form.Label className="edit-form-title pt-4">Title</Form.Label>
-            <Form.Control required size="lg" name="title" type="text" value={formTitle || ""} onChange={HandleInputChange} placeholder="The title of your article" minLength="10" maxLength="70"/>
+            <Form.Control required size="lg" name="title" type="text" value={formTitle || ""} onChange={HandleInputChange} placeholder="The title of your article" minLength="10" maxLength="70" />
             <Form.Control.Feedback type="invalid" className="feedback">Title is Empty!</Form.Control.Feedback>
-            </Form.Group>
-            <Form.Group>
+          </Form.Group>
+          <Form.Group>
             <Form.Label className="edit-form-content" >Article Content</Form.Label>
-            <Form.Control required as="textarea" name="content" rows="10" value={formContent || ""} onChange={HandleInputChange} placeholder="Your article's content is placed here..." minLength="25"/>
+            <Form.Control required as="textarea" name="content" rows="10" value={formContent || ""} onChange={HandleInputChange} placeholder="Your article's content is placed here..." minLength="25" />
             <Form.Control.Feedback type="invalid" className="feedback">The Article Content Needs to be at least 50 Characters long!</Form.Control.Feedback>
-            </Form.Group>
-            <Form.Group>
+          </Form.Group>
+          <Form.Group>
             <Form.Label className="edit-form-content" >Upload An Image</Form.Label>
-            <Form.Control required size="lg" name="image" type="text" value={formPicture || ""}  onChange={HandleInputChange} placeholder="The link to your article's image" minLength="10"/>
-            </Form.Group>
-            <Form.Group>
+            <Form.Control required size="lg" name="image" type="text" value={formPicture || ""} onChange={HandleInputChange} placeholder="The link to your article's image" minLength="10" />
+          </Form.Group>
+          <Form.Group>
             <Form.Label className="edit-form-content" >Image Credit</Form.Label>
-            <Form.Control required size="lg" name="credit" type="text" value={formPictureCredit || ""}  onChange={HandleInputChange} placeholder="The link to your article's image" minLength="10"/>
-            </Form.Group>
-            <Button variant="warning" size="md" type="submit" disabled={isLoading} onClick={!isLoading ? handleClick : null} className="my-2" block> {isLoading ? 'Loading…' : 'Save Changes'}</Button>
-            </Form>}
+            <Form.Control required size="lg" name="credit" type="text" value={formPictureCredit || ""} onChange={HandleInputChange} placeholder="The link to your article's image" minLength="10" />
+          </Form.Group>
+          <Button variant="warning" size="md" type="submit" disabled={isLoading} onClick={!isLoading ? handleClick : null} className="my-2" block> {isLoading ? 'Loading…' : 'Save Changes'}</Button>
+        </Form>}
 
-            </>
-    )
-
+    </>
+  )
 }
 
 export default ArticleEditContent

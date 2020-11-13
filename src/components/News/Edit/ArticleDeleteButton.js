@@ -25,9 +25,9 @@ const ArticleDeleteButton = ({article}) =>{
         }
 
     return(
-        <>
+      <>
         <Button variant="danger" size="lg" type="submit" disabled={isLoading} onClick={handleSubmit} className="my-3" block> {isLoading ? 'Loading…' : 'Delete Article'}</Button>
-        </>
+      </>
     )
 }
 

@@ -4,6 +4,7 @@ import {Col, Button} from 'react-bootstrap'
 import ArticleContent from './ArticleContent'
 import ArticleTop from './ArticleTop'
 import axios from 'axios'
+import { getArticles } from '../getArticles'
 
 const Article = ({match}) =>{
 
@@ -26,16 +27,14 @@ const Article = ({match}) =>{
     })
    }
 
-   return(
+  return article.id ? (
     <>
-    {article.id && (
-    <Col md={{ span: 11, offset: 0.9 }} data-testid="article-test"  className="p-4 ml-5">
-    <ArticleTop article={article}/>
-    <ArticleContent article={article}/>
-    </Col>
-    )}
+      <Col md={{ span: 11, offset: 0.9 }} data-testid="article-test" className="p-4 ml-5">
+        <ArticleTop article={article} />
+        <ArticleContent article={article} />
+      </Col>
     </>
-    )
+  ) : null
 }
 
 export default Article

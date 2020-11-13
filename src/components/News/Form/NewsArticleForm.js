@@ -4,9 +4,9 @@ import NewsForm from './NewsForm'
 
 const NewsArticleForm = () =>{
     return(
-   <Container>
-   <NewsForm/>
-   </Container>
+        <Container>
+            <NewsForm />
+        </Container>
     )
 }
 
