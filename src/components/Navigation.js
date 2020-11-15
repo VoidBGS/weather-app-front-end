@@ -18,7 +18,7 @@ const Navigation = () =>{
                         <Nav.Link className="navigation-bar-list"><Link to="/">Weather</Link></Nav.Link>
                         <Nav.Link className="navigation-bar-list"><Link to="/News">News</Link></Nav.Link>
                         <Nav.Link className="navigation-bar-list"><Link to="/Photos">Photos</Link></Nav.Link>
-                        <Nav.Link className="navigation-bar-list"><Link to="/Forum"><strike>Forum</strike></Link></Nav.Link>
+                        <Nav.Link className="navigation-bar-list"><Link to="/Forum">Weather Maps</Link></Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
