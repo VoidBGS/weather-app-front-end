@@ -1,0 +1,27 @@
+.maps-title{
+    font-family: Signika Negative; font-size: 45pt; font-style: normal; font-variant: normal; font-weight: 350; line-height: 26.4px;
+    padding: 30px;
+    text-shadow: 2px 2px 4px #764400;
+    color: #ffffff;
+}
+.sat-map{
+    width: 100%;
+}
+.infra-sat-map{
+    width: 100%;
+}
+.infra-sat-map-wrapper{
+    width: 1000px;
+    box-shadow: 0px 3px 9px #764400;
+}
+.map-page-wrapper{
+    background-color: #ffffff;
+    box-shadow: 0px 3px 9px #764400;
+}
+.maps-secondary-title{
+    font-family: Arial, Helvetica, sans-serif; font-size: 34px; font-style: normal; font-variant: normal; font-weight: 350; line-height: 26.4px;
+    padding: 12px;
+    color: #000000fa;
+    filter:blur(0.5px);
+    text-shadow: 1px 1px 1px #000000;
+}
