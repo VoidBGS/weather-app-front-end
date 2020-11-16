@@ -22,16 +22,15 @@ const ArticleEdit = ({match}) =>{
         })
        }
 
-    return(
+    return article ? (
       <>
-        {article && (
           <>
             <ArticleEditForm article={article} />
             <ArticleDeleteButton article={article} />
           </>
-        )}
+ 
       </>
-    )
-}
+    ): null
+} 
 
 export default ArticleEdit

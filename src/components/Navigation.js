@@ -16,9 +16,9 @@ const Navigation = () =>{
                 <Navbar.Collapse name="navigation-bar">
                     <Nav className="navigation-bar mr-auto">
                         <Nav.Link className="navigation-bar-list"><Link to="/">Weather</Link></Nav.Link>
+                        <Nav.Link className="navigation-bar-list"><Link to="/Weather-Maps">Maps</Link></Nav.Link>
                         <Nav.Link className="navigation-bar-list"><Link to="/News">News</Link></Nav.Link>
                         <Nav.Link className="navigation-bar-list"><Link to="/Photos">Photos</Link></Nav.Link>
-                        <Nav.Link className="navigation-bar-list"><Link to="/Forum">Weather Maps</Link></Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

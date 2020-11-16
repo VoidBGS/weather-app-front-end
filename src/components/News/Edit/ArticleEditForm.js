@@ -61,13 +61,11 @@ function ArticleEditContent({article}){
             }
         }
         ).then(function (response){
-            console.log(response);
             setLoading(false)
             window.location.replace(`http://localhost:3000/News/Article/${ID}`)
           }).catch(function (error) {
             console.error(error);
           })
-          console.log(res);
         }
         setValidated(true);
     };
@@ -75,7 +73,7 @@ function ArticleEditContent({article}){
 
     return(
     <>
-      {article.id === undefined ? <ErrorPage /> :
+      {article.id === undefined ? <ErrorPage /> : (
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
           <Form.Group>
             <Form.Label className="edit-form-title pt-4">Title</Form.Label>
@@ -96,7 +94,7 @@ function ArticleEditContent({article}){
             <Form.Control required size="lg" name="credit" type="text" value={formPictureCredit || ""} onChange={HandleInputChange} placeholder="The link to your article's image" minLength="10" />
           </Form.Group>
           <Button variant="warning" size="md" type="submit" disabled={isLoading} onClick={!isLoading ? handleClick : null} className="my-2" block> {isLoading ? 'Loading…' : 'Save Changes'}</Button>
-        </Form>}
+        </Form>)}
 
     </>
   )

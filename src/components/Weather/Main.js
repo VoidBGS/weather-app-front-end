@@ -9,32 +9,29 @@ const Main = () =>{
     const [weather, setWeather] = useState({});
     const [temperature, setTemperature] = useState({});
     const [wind, setWind] = useState({});
-    const [data, setData] = useState({});
+    const [city, setCity] = useState("");
 
 
     const currentWeather = async () =>{
         const API_KEY = '1266751b2faa16b328461cfc57e7f4d8';
         const URL = `https://api.openweathermap.org/data/2.5/weather?lat=51.441643&lon=5.478000&apikey=${API_KEY}&units=metric`;
-           //Add catch/then
-           const request = axios.get(URL)
-           const response = await request;
-        
-
+           const request = axios.get(URL).then(function (response){
+            setWeather(response.data.weather[0]);
+            setTemperature(response.data.main);
+            setWind(response.data.wind);
+            setCity(response.data.name);
+          }).catch(function (error) {
+            console.error(error);
+          })
            //Set only one set hook or use conistant hooks
-           setWeather(response.data.weather[0]);
-           setTemperature(response.data.main);
-           setWind(response.data.wind);
-           setData(response.data);
         }
         useEffect(() => {
             currentWeather()
-            console.log('test')
           }, []);
-// ? : Ternary Add instead of main
+
     const {humidity, temp} = temperature;
     const {speed} = wind;
     const {description, main} = weather;
-    const {name} = data;
 
     return main ? (
         <>
@@ -45,7 +42,7 @@ const Main = () =>{
                             <span>{Math.round(temp)}&deg;C</span>
                         </Col>
                         <Col lg={{ offset: 2 }} className="city-name">
-                            <span>{name}</span>
+                            <span>{city}</span>
                             <sup>NL</sup><br /><br />
                             <span className="city-season">{defineSeason()}</span>
                         </Col>

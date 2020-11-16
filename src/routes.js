@@ -1,7 +1,7 @@
 import React from 'react'
 import Weather from './components/Weather/Weather'
 import News from './components/News/News'
-import Forum from './components/Forum/Forum'
+import Maps from './components/Maps/Maps'
 import Photos from './components/Photos/Photos'
 import NewsArticleForm from './components/News/Form/NewsArticleForm'
 import Navigation from './components/Navigation'
@@ -21,7 +21,7 @@ const CreateRoutes = () =>{
                 <Route path="/" exact component={Weather} />
                 <Route path="/News" exact component={News} />
                 <Route path="/Photos" exact component={Photos} />
-                <Route path="/Forum" exact component={Forum} />
+                <Route path="/Weather-Maps" exact component={Maps} />
 
                 {/*Authentication Links*/}
                 <Route path="/Register" exact component={Register} />

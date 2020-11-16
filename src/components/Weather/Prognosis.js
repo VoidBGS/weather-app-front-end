@@ -23,10 +23,9 @@ const Prognosis = () =>{
       useEffect(() => {
          weatherForecast()
        }, []);
-//            <button onClick={weatherForecast} value="Get Data">Get Data</button>
+
     return(
        <div>
-
           <Row className="weather-text"><p>3-Day Prognosis</p></Row>
           <div className="pb-3">
              <Row className="weather-box-wrapper pt-4 mb-5">
