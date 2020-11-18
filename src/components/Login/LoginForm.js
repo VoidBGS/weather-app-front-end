@@ -36,6 +36,10 @@ const LoginForm = () =>{
       ).then(function (response){
           console.log(response);
           localStorage.setItem("Token", response.data.token);
+          setSuccess(true);
+          setTimeout(function () {
+            Redirect()
+          }, 3000);
         }).catch(function (error) {
           console.error(error);
           setLoading(false);
@@ -45,9 +49,8 @@ const LoginForm = () =>{
   };
     //Look into the Backend to check if the token is valid
     //Json web tokens include users.
-    
     function Redirect(){
-    window.location.replace('http://localhost:3000')
+    window.location.replace('http://localhost:3000/News')
     }
     const [isLoading, setLoading] = useState(false);
     const handleClick = () => setLoading(true);
@@ -71,7 +74,7 @@ const LoginForm = () =>{
               <b>Success!</b>
             </Alert.Heading>
             <Row className="pl-3">
-              <p>Your account has been created. Please check your email for the activation link.</p>
+              <p>You have logged in successfully. Welcome!</p>
               <p><i>Redirecting</i></p>
               <Spinner animation="border" size="sm" role="status" className="mt-2 ml-2">
               </Spinner>

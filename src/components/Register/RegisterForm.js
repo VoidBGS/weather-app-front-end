@@ -64,7 +64,7 @@ const RegisterForm = () =>{
   //Seperate component for making API calls
 
   function Redirect(){
-     window.location.replace('http://localhost:3000')
+     window.location.replace('http://localhost:3000/Login')
   }
 
   return (
@@ -96,14 +96,13 @@ const RegisterForm = () =>{
               <b>Success!</b>
             </Alert.Heading>
             <Row className="pl-3">
-              <p>Your account has been created. Please check your email for the activation link.</p>
               <p><i>Redirecting</i></p>
               <Spinner animation="border" size="sm" role="status" className="mt-2 ml-2">
               </Spinner>
             </Row>
           </Alert>
-          <Button variant="dark" size="lg" type="submit" disabled={isLoading} onClick={!isLoading ? handleClick : null} className="register-form-button my-3 mb-2"> {isLoading ? 'Loading…' : 'Sign Up'}</Button>
           <p className="sign-up p-3 ml-2"><a href="/Login">Already have an account? Click here!</a></p>
+          <Button variant="dark" size="lg" type="submit" disabled={isLoading} onClick={!isLoading ? handleClick : null} className="register-form-button my-3 mb-2"> {isLoading ? 'Loading…' : 'Sign Up'}</Button>
         </Form>
       </Col>
 

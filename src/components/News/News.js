@@ -29,7 +29,9 @@ const News = () =>{
           <Col ><NewsTitle /></Col>
         </Row>
         <Col className="news-article-background py-4 my-4">
+          {localStorage.getItem('Token') ? (
           <Button variant="warning" size="lg" href="News/Post" className="news-button ml-5">Post Article</Button>
+          ) : null}
           {articles.map(article => (
             <div key={article.id}>
               <Link to={`News/Article/${article.id}`}>{NewsBox(article)}</Link>
