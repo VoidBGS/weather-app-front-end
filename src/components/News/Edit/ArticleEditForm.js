@@ -57,7 +57,8 @@ function ArticleEditContent({article}){
         });
           const res = await axios.put(URL, data, {
             headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': sessionStorage.getItem('Token')
             }
         }
         ).then(function (response){

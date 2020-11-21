@@ -12,15 +12,16 @@ const ArticleDeleteButton = ({article}) =>{
     const handleSubmit = async () => {
         if(window.confirm("Are you sure you want to delete this article?"))
         {
+          if(sessionStorage.getItem('Token') !== null){
           const res = await axios.delete(URL)
           .then(function (response){
             console.log(response)
             setLoading(false)
             window.location.replace('http://localhost:3000/News')
-
           }).catch(function (error) {
             console.error(error);
           })
+        }
         }
         }
 

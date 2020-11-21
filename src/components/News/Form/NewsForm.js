@@ -49,7 +49,7 @@ const NewsForm = () => {
         setValidated(true);
     };
 
-        return (
+        return sessionStorage.getItem('Token') ? (
           <>
             <Form noValidate validated={validated} onSubmit={handleSubmit}>
               <Form.Group>
@@ -75,7 +75,7 @@ const NewsForm = () => {
               <Button variant="warning" size="lg" type="submit" disabled={isLoading} onClick={!isLoading ? handleClick : null} className="news-form-button mb-4" block> {isLoading ? 'Loading…' : 'Post Article'}</Button>
             </Form>
           </>
-        )
+        ) : window.location.replace('/News')
 }
 
 export default NewsForm;

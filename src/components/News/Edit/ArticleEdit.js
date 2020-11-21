@@ -24,11 +24,12 @@ const ArticleEdit = ({match}) =>{
 
     return article ? (
       <>
+      {sessionStorage.getItem('Token') ? (
           <>
             <ArticleEditForm article={article} />
             <ArticleDeleteButton article={article} />
-          </>
- 
+          </>) : window.location.replace('http://localhost:3000/News')
+            }
       </>
     ): null
 } 
