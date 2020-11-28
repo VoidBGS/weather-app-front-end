@@ -36,6 +36,7 @@ const LoginForm = () =>{
       ).then(function (response){
           console.log(response);
           sessionStorage.setItem("Token", response.data.token);
+          sessionStorage.setItem("Name", response.data.authorName)
           setSuccess(true);
           setTimeout(function () {
             Redirect()

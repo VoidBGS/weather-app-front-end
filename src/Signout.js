@@ -3,7 +3,10 @@ import {Row, Alert, Spinner} from 'react-bootstrap'
 
 export default function Signout() {
     useEffect(() =>{
+        if(sessionStorage.getItem('Token')){
         sessionStorage.removeItem('Token');
+        sessionStorage.removeItem('Name');
+        }
         window.location.replace('http://localhost:3000/')
     }, [])
 

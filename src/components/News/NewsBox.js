@@ -20,7 +20,7 @@ const NewsBox = (article) =>{
                   <p className="px-2">{article.dateTimeCreated}</p> -
            </div>
                 <div className="news-article-details">
-                  <p className="px-2">Author</p>
+                  <p className="px-2">{article.authorName}</p>
                 </div>
               </Row>
             </Col>

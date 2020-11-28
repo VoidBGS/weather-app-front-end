@@ -27,6 +27,7 @@ const NewsForm = () => {
         else{
           event.preventDefault();
           let data = JSON.stringify({
+            AuthorName: sessionStorage.getItem('Name'),
             ArticleTitle: formData.title,
             ArticleContent: formData.content,
             ArticlePicture: formData.image,
