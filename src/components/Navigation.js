@@ -2,12 +2,11 @@ import React from 'react'
 import './App.css'
 import {Link} from "react-router-dom";
 import {Navbar, Nav, Row, Col} from 'react-bootstrap'
-import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse';
 
 const Navigation = () =>{
     return(
         <div>
-            <Row className="navigation-flexbox">
+            <Row className="navigation-flexbox" data-testid="navigation-bar-test">
                 <Col sm={2} md={4} lg={6}><h2 className="logo">Weather<br />Hoven</h2></Col>
                 {sessionStorage.getItem("Token") ?(
                 (<Col sm={{ span: 4, offset: 6 }} md={{ span: 4, offset: 4 }} lg={{ span: 2, offset: 4 }} ><p className="sign-in p-3"><a href="/Signout">Sign out</a></p></Col>)

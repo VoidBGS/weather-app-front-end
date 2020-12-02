@@ -6,7 +6,7 @@ import './Maps.css'
 const Maps = () =>{
     return (
         <>
-            <Row className="justify-content-center">
+            <Row className="justify-content-center" data-testid="maps-page-test" >
                 <MapsTitle></MapsTitle>
             </Row>
             <Row className="map-page-wrapper m-3">

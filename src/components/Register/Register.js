@@ -7,7 +7,7 @@ import {Container} from 'react-bootstrap'
 const Register = () =>{
 
     return (
-        <Container>
+        <Container data-testid="register-page-test">
             <RegisterTitle />
             <RegisterForm />
         </Container>

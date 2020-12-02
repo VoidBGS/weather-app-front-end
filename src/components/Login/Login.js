@@ -6,7 +6,7 @@ import {Container} from 'react-bootstrap'
 
 const Login = () =>{
     return (
-        <Container>
+        <Container data-testid="login-page-test">
             <LoginTitle />
             <LoginForm />
         </Container>

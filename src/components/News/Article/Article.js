@@ -17,7 +17,7 @@ const Article = ({match}) =>{
 
   const [article, setArticle] = useState({})
 
-   const getArticle = async (id) =>{
+    const getArticle = async (id) =>{
     const response = await axios.get(URL)
     .then(function (response){
       setArticle(response.data);
