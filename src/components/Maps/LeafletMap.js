@@ -19,8 +19,7 @@ const LeafletMap = () => {
         map.setZoom(foo);
         map.setMinZoom(foo);
         map.setView(eindhovenCoordinates, foo);
-        map.setMaxBounds(bounds)
-        if(foo <= 2){map.setMaxBounds(null)}
+        (foo <= 2) ? map.setMaxBounds(null) : map.setMaxBounds(bounds)
     }
 
     return (
