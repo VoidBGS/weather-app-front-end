@@ -1,42 +1,51 @@
-import React, {useState, useEffect} from "react"
-import { Row, Col, ToggleButtonGroup, ToggleButton } from 'react-bootstrap';
-import { MapContainer, TileLayer, LayersControl, setZoom } from 'react-leaflet';
+import React, {useState} from "react"
+import { Col, ToggleButtonGroup, ToggleButton } from 'react-bootstrap';
+import { MapContainer, TileLayer, LayersControl } from 'react-leaflet';
 
 const LeafletMap = () => {
-
-    const [zoom, setZoom] = useState(5)
     const [map, setMap] = useState(null)
+    const eindhovenCoordinates = [51.4416, 5.4697]
 
     const bounds = [
-        [51.4416, 5.4697],
-        [51.4416, 5.4697],
+        [eindhovenCoordinates[0], eindhovenCoordinates[1]],
+        [eindhovenCoordinates[0], eindhovenCoordinates[1]],
     ]
-    const center = [51.4416, 5.4697]
 
     const HandleChange = (e) => {
-        if(e == "Europe"){
-            map.setZoom(5)
-            map.setView(center, 5);
-        }
-        else if (e == "World"){
-            map.setZoom(1)
-            map.setView(center, 12);
-        }
+        SetMapRestrictions(e);
     }
-    console.log(zoom);
+
+    function SetMapRestrictions(foo){
+        map.setZoom(foo);
+        map.setMinZoom(foo);
+        map.setView(eindhovenCoordinates, foo);
+        map.setMaxBounds(bounds)
+        if(foo <= 2){map.setMaxBounds(null)}
+    }
+
     return (
         <Col>
         <div className="infra-sat-map-wrapper m-4">
         <ToggleButtonGroup type="radio" name="options" defaultValue={"Europe"} onChange={HandleChange}>
-             <ToggleButton variant="light" className="map-button" value={"Europe"}>Europe, Eindhoven</ToggleButton>
-             <ToggleButton variant="light" className="map-button" value={"World"}>Worldwide</ToggleButton>
+             <ToggleButton variant="light" className="map-button" value={"12"}>Eindhoven</ToggleButton>
+             <ToggleButton variant="light" className="map-button" value={"5"}>Europe</ToggleButton>
+             <ToggleButton variant="light" className="map-button" value={"2"}>Worldwide</ToggleButton>
         </ToggleButtonGroup>
-            <MapContainer center={[51.44083, 5.47778]}  whenCreated={setMap} zoom={zoom} minZoom={zoom} scrollWheelZoom={false}>
+            <MapContainer center={[51.44083, 5.47778]} whenCreated={setMap} zoom={12} minZoom={1} scrollWheelZoom={false}>
                 <LayersControl position="topright">
                     <TileLayer
                         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> | <a href="https://openweathermap.org/">OpenWeather</a>'
                         url="https://c.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     />
+                     <LayersControl.BaseLayer checked name="Temperature">
+                            <TileLayer url="https://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid=3eb784b45ba4acbd7f9a6ec8a4e06841" zIndex={10} opacity={3} />
+                        </LayersControl.BaseLayer>
+                        <LayersControl.BaseLayer name="Wind">
+                            <TileLayer url="https://tile.openweathermap.org/map/wind_new/{z}/{x}/{y}.png?appid=3eb784b45ba4acbd7f9a6ec8a4e06841" zIndex={10} opacity={3}/>
+                        </LayersControl.BaseLayer>
+                        <LayersControl.BaseLayer name="Precipitation">
+                            <TileLayer url="https://tile.openweathermap.org/map/precipitation_new/{z}/{x}/{y}.png?appid=3eb784b45ba4acbd7f9a6ec8a4e06841" zIndex={10} opacity={3}/>
+                        </LayersControl.BaseLayer>
                 </LayersControl>
             </MapContainer>
         </div>
