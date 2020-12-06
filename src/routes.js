@@ -9,6 +9,7 @@ import Article from './components/News/Article/Article'
 import ArticleEdit from './components/News/Edit/ArticleEdit'
 import Register from './components/Register/Register'
 import Login from './components/Login/Login'
+import UploadPicture from './components/Photos/Form/UploadPicture'
 import Signout from './Signout'
 import ErrorPage from './ErrorPage'
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
@@ -33,6 +34,9 @@ const CreateRoutes = () =>{
                 <Route path="/News/Post" exact component={NewsArticleForm} />
                 <Route path="/News/Article/:id/Edit" exact component={ArticleEdit} />
                 <Route path="/News/Article/:id" component={Article} />
+
+                 {/*Pictures*/}
+                 <Route path="/Photos/Upload" exact component={UploadPicture} />
 
                 {/*Error Handling*/}
                 <Route component={ErrorPage} />

@@ -8,7 +8,6 @@ const Photos = () =>{
         <div>
             <PhotosTitle />
             <ImageSection />
-            <ImageSection />
         </div>
     )
 }
