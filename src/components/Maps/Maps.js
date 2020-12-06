@@ -5,18 +5,13 @@ import './Maps.css'
 import LeafletMap from './LeafletMap'
 
 const Maps = () => {
-    const bounds = [
-        [51.4416, 5.4697],
-        [51.4416, 5.4697],
-    ]
-
     return (
         <>
             <Row className="justify-content-center" data-testid="maps-page-test" >
                 <MapsTitle></MapsTitle>
             </Row>
             <Row className="map-page-wrapper m-3">
-                <p className="maps-secondary-title ml-4">Interactive Map - Eindhoven</p>
+                <p className="maps-secondary-title ml-4">Interactive Weather Map</p>
                 <LeafletMap/>
                 <hr className="linebreak-darkened"></hr>
                 <p className="maps-secondary-title ml-4">Infrared Satellite Image - Europe</p>
