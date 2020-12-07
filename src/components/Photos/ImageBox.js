@@ -1,7 +1,7 @@
 import React from 'react'
 import { Col } from 'react-bootstrap';
 
-const ImageBox = () =>{
+const ImageBox = (picture) =>{
     return(
         <Col lg={{ span: 4 }} >
             <div className="image-box">

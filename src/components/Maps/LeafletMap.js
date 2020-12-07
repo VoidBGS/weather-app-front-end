@@ -16,18 +16,21 @@ const LeafletMap = () => {
     }
 
     function SetMapRestrictions(foo){
+        console.log(foo)
         map.setZoom(foo);
         map.setMinZoom(foo);
+        map.setMaxZoom(foo);
         map.setView(eindhovenCoordinates, foo);
-        (foo <= 2) ? map.setMaxBounds([[180, 180], [[-180, -180]]]) : map.setMaxBounds(bounds)
+        if(foo <= 2){map.setMaxBounds([[180, 180], [[-180, -180]]]); map.setMaxZoom(undefined);}
+        else{map.setMaxBounds(bounds)}
     }
 
     return (
         <Col>
         <div className="infra-sat-map-wrapper m-4">
-        <ToggleButtonGroup type="radio" name="options" defaultValue={"5"} onChange={HandleChange}>
+        <ToggleButtonGroup type="radio" name="options" defaultValue={"4"} onChange={HandleChange}>
              <ToggleButton variant="light" className="map-button" value={"12"}>Eindhoven</ToggleButton>
-             <ToggleButton variant="light" className="map-button" value={"5"}>Europe</ToggleButton>
+             <ToggleButton variant="light" className="map-button" value={"4"}>Europe</ToggleButton>
              <ToggleButton variant="light" className="map-button" value={"2"}>Worldwide</ToggleButton>
         </ToggleButtonGroup>
             <MapContainer center={[51.44083, 5.47778]} whenCreated={setMap} zoom={5} minZoom={5} scrollWheelZoom={false}>
