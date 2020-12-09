@@ -18,7 +18,7 @@ const News = () =>{
       if(data != undefined){
       setArticles(reverseArticles(data));}
     }
-    
+    //Remove this and add orderBy Descending for backend
     function reverseArticles(array){
       return array.reverse()
     }
