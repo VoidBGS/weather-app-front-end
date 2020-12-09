@@ -25,6 +25,7 @@ const Main = () =>{
           })
            //Set only one set hook or use conistant hooks
         }
+        
         useEffect(() => {
             currentWeather()
           }, []);

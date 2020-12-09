@@ -33,7 +33,7 @@ const LeafletMap = () => {
              <ToggleButton variant="light" className="map-button" value={"4"}>Europe</ToggleButton>
              <ToggleButton variant="light" className="map-button" value={"2"}>Worldwide</ToggleButton>
         </ToggleButtonGroup>
-            <MapContainer center={[51.44083, 5.47778]} whenCreated={setMap} zoom={5} minZoom={5} scrollWheelZoom={false}>
+            <MapContainer center={[51.44083, 5.47778]} whenCreated={setMap} zoom={4} minZoom={4} scrollWheelZoom={false}>
                 <LayersControl position="topright">
                     <TileLayer
                         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> | <a href="https://openweathermap.org/">OpenWeather</a>'

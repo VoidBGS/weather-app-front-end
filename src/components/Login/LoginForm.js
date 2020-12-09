@@ -7,6 +7,7 @@ const initialInputState = { email: "", password:""};
 const LoginForm = () =>{
     const [validated, setValidated] = useState(false);
     const [success, setSuccess] = useState(false);
+    const [invalid, setInvalid] = useState(true);
     const [formData, setFormData] = useState(initialInputState)
     const URL = "https://localhost:44343/api/authenticate/Login"
 
@@ -42,7 +43,6 @@ const LoginForm = () =>{
             Redirect()
           }, 3000);
         }).catch(function (error) {
-          console.error(error);
           setLoading(false);
         })
       }

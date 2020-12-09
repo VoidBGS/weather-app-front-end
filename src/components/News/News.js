@@ -25,8 +25,8 @@ const News = () =>{
     
     return articles ? (
       <>
-        <Row>
-          <Col ><NewsTitle /></Col>
+        <Row className="justify-content-center"  >
+              <NewsTitle />
         </Row>
         <Col className="news-article-background py-4 my-4">
           {sessionStorage.getItem('Token') ? (
