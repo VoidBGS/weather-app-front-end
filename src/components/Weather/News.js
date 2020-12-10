@@ -13,16 +13,11 @@ const News = () =>{
     async function fetchAPI(){
         const {data} = await getArticles();
         if(data != undefined){
-        setArticles(reverseArticles(data));}
-    }
-        
-    function reverseArticles(array){
-        return array.reverse()
+        setArticles(data);}
     }
 
     const rows = [];
     //Change the backend to return a number of articles.
-    //Add Array.map instead of printing our rows
     for (var i = 0; i < 3; i++) {
        rows.push(articles[i]);
     }
