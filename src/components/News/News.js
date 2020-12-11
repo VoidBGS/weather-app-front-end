@@ -16,11 +16,8 @@ const News = () =>{
      const callAPI = async () =>{
      const {data} = await getArticles();
       if(data != undefined){
-      setArticles(reverseArticles(data));}
-    }
-    //Remove this and add orderBy Descending for backend
-    function reverseArticles(array){
-      return array.reverse()
+      setArticles(data);
+      }
     }
     
     return articles ? (
