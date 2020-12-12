@@ -15,10 +15,11 @@ const News = () =>{
      
      const callAPI = async () =>{
      const {data} = await getArticles();
-      if(data !== undefined){
-      setArticles(data);}
+      if(data != undefined){
+      setArticles(data);
+      }
     }
-
+    
     return articles ? (
       <>
         <Row className="justify-content-center"  >
