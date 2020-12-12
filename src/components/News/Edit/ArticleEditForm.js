@@ -1,7 +1,7 @@
 import React, {useState, useEffect}  from 'react'
 import {Form, Button} from 'react-bootstrap'
 import axios from 'axios'
-import ErrorPage from '../../../ErrorPage'
+import ErrorPage from '../../ErrorPage'
 
 
 function ArticleEditContent({article}){
@@ -23,16 +23,16 @@ function ArticleEditContent({article}){
         }, [article.id, article.articleTitle, article.articleContent, article.articlePicture, article.articlePictureCredit]);
 
     const HandleInputChange = (e) =>{
-        if(e.target.name == "title"){
+        if(e.target.name === "title"){
             setFormTitle(e.target.value)
         }
-        if(e.target.name == "content"){
+        if(e.target.name === "content"){
             setFormContent(e.target.value)
         }
-        if(e.target.name == "image"){
+        if(e.target.name === "image"){
             setFormPicture(e.target.value)
         }
-        if(e.target.name == "credit"){
+        if(e.target.name === "credit"){
           setFormPictureCredit(e.target.value)
       }
       }
@@ -55,7 +55,7 @@ function ArticleEditContent({article}){
             ArticlePicture: formPicture,
             ArticlePictureCredit: formPictureCredit,
         });
-          const res = await axios.put(URL, data, {
+            await axios.put(URL, data, {
             headers: {
             'Content-Type': 'application/json',
             'Authorization': sessionStorage.getItem('Token')

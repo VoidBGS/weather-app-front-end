@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { Button } from 'react-bootstrap'
-import { Redirect } from 'react-router-dom';
 
 const ArticleDeleteButton = ({ article }) => {
   const [isLoading, setLoading] = useState(false);
@@ -14,10 +13,9 @@ const ArticleDeleteButton = ({ article }) => {
       let data = JSON.stringify({
         AuthorName: sessionStorage.getItem('Name'),
     });
-
-
+    
       if (sessionStorage.getItem('Token') !== null) {
-        const res = await axios.delete(URL)
+           await axios.delete(URL)
           .then(function (response) {
             console.log(response)
             setLoading(false)

@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import './NewsArticleForm.css'
 import {Form, Button} from 'react-bootstrap'
-import ImageUploader from 'react-images-upload';
 import axios from 'axios';
 const initialInputState = { title: "", content: "", image:"", credit:""};
 

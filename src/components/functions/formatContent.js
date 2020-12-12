@@ -5,10 +5,5 @@ function formatContent(array){
 
     return formattedArray;
 }
-function formatContentBold(array){
-    let formattedArrayBold = array.split('*').map(str => <b>{str}</b>);
-    
-    return formattedArrayBold;
-}
 
 export default formatContent;

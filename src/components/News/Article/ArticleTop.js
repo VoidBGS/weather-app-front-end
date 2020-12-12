@@ -8,7 +8,7 @@ const ArticleTop = ({article}) =>{
     return(
         <Row>
             <div className="article-image-wrapper">
-                <img src={articlePicture} className="article-img"></img>
+                <img src={articlePicture} alt="" className="article-img"></img>
                 <div className="text-wrapper px-5 pb-3">
                     <Row className="article-title"><h1>{articleTitle}</h1></Row>
                 </div>

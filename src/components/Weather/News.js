@@ -12,7 +12,7 @@ const News = () =>{
 
     async function fetchAPI(){
         const {data} = await getArticles();
-        if(data != undefined){
+        if(data !== undefined){
         setArticles(data);}
     }
 

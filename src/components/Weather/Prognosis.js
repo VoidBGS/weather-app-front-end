@@ -8,7 +8,6 @@ import axios from 'axios';
 const Prognosis = () =>{
 
    const [forecast, setData] = useState({});
-   const [city, setCity] = useState({})
  
    //Every 8 points equal a new day so - 8, 16, 24 a0584d716e9b992064ad01890816506d 
    const weatherForecast = async () =>{

@@ -1,10 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import './Article.css'
-import {Col, Button} from 'react-bootstrap'
+import {Col} from 'react-bootstrap'
 import ArticleContent from './ArticleContent'
 import ArticleTop from './ArticleTop'
 import axios from 'axios'
-import { getArticles } from '../getArticles'
 
 const Article = ({match}) =>{
 

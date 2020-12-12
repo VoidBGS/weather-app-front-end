@@ -15,14 +15,10 @@ const News = () =>{
      
      const callAPI = async () =>{
      const {data} = await getArticles();
-      if(data != undefined){
-      setArticles(reverseArticles(data));}
+      if(data !== undefined){
+      setArticles(data);}
     }
-    //Remove this and add orderBy Descending for backend
-    function reverseArticles(array){
-      return array.reverse()
-    }
-    
+
     return articles ? (
       <>
         <Row className="justify-content-center"  >

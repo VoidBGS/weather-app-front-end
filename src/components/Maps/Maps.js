@@ -1,6 +1,5 @@
 import React from 'react'
 import { Row, Col } from 'react-bootstrap';
-import MapsTitle from './MapsTitle.js'
 import './Maps.css'
 import LeafletMap from './LeafletMap'
 
@@ -8,7 +7,7 @@ const Maps = () => {
     return (
         <>
             <Row className="justify-content-center" data-testid="maps-page-test" >
-                <MapsTitle></MapsTitle>
+            <p className="maps-title">Weather Maps and Images</p>
             </Row>
             <Row className="map-page-wrapper m-3">
                 <p className="maps-secondary-title ml-4">Interactive Weather Map</p>
