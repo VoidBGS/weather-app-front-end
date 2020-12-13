@@ -9,7 +9,7 @@ const LoginForm = () =>{
     const [success, setSuccess] = useState(false);
     const [invalid, setInvalid] = useState(true);
     const [formData, setFormData] = useState(initialInputState)
-    const URL = "https://localhost:44343/api/authenticate/Login"
+    const URL = process.env.REACT_APP_AUTH_URL
 
     const HandleInputChange = (e) =>{
       setFormData({...formData, [e.target.name]: e.target.value});
@@ -29,7 +29,7 @@ const LoginForm = () =>{
           Email: formData.email,
           Password: formData.password
       });
-        const response = await axios.post(URL, data, {
+        const response = await axios.post(URL + "/api/authenticate/Login", data, {
           headers: {
           'Content-Type': 'application/json'
           }

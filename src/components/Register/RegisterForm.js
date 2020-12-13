@@ -8,7 +8,7 @@ const RegisterForm = () =>{
     const [validated, setValidated] = useState(false);
     const [success, setSuccess] = useState(false);
     const [formData, setFormData] = useState(initialInputState)
-    const URL = "https://localhost:44343/api/authenticate/Register"
+    const URL = process.env.REACT_APP_AUTH_URL
 
     const HandleInputChange = (e) =>{
       setFormData({...formData, [e.target.name]: e.target.value});
@@ -41,7 +41,7 @@ const RegisterForm = () =>{
           Email: formData.email,
           Password: formData.password
       });
-        const res = await axios.post(URL, data, {
+        const res = await axios.post(URL + "/api/authenticate/Register", data, {
           headers: {
           'Content-Type': 'application/json'
           }

@@ -5,6 +5,11 @@ import { MapContainer, TileLayer, LayersControl } from 'react-leaflet';
 const LeafletMap = () => {
     const [map, setMap] = useState(null)
     const eindhovenCoordinates = [51.4416, 5.4697]
+    const API_KEY = process.env.REACT_APP_OPENWEATHER_MAPS_KEY
+    const URL_TEMP = `https://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid=${API_KEY}`
+    const URL_WIND = `https://tile.openweathermap.org/map/wind_new/{z}/{x}/{y}.png?appid=${API_KEY}`
+    const URL_PRECIPITATION = `https://tile.openweathermap.org/map/precipitation_new/{z}/{x}/{y}.png?appid=${API_KEY}`
+
 
     const bounds = [
         [eindhovenCoordinates[0], eindhovenCoordinates[1]],
@@ -40,13 +45,13 @@ const LeafletMap = () => {
                         url="https://c.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     />
                      <LayersControl.BaseLayer checked name="Temperature">
-                            <TileLayer url="https://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid=3eb784b45ba4acbd7f9a6ec8a4e06841" zIndex={10} opacity={100} />
+                            <TileLayer url={URL} zIndex={10} opacity={100} />
                         </LayersControl.BaseLayer>
                         <LayersControl.BaseLayer name="Wind">
-                            <TileLayer url="https://tile.openweathermap.org/map/wind_new/{z}/{x}/{y}.png?appid=3eb784b45ba4acbd7f9a6ec8a4e06841" zIndex={10} opacity={100}/>
+                            <TileLayer url={URL_WIND} zIndex={10} opacity={100}/>
                         </LayersControl.BaseLayer>
                         <LayersControl.BaseLayer name="Precipitation">
-                            <TileLayer url="https://tile.openweathermap.org/map/precipitation_new/{z}/{x}/{y}.png?appid=3eb784b45ba4acbd7f9a6ec8a4e06841" zIndex={10} opacity={100}/>
+                            <TileLayer url={URL_PRECIPITATION} zIndex={10} opacity={100}/>
                         </LayersControl.BaseLayer>
                 </LayersControl>
             </MapContainer>
