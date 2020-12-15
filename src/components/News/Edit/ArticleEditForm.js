@@ -12,7 +12,7 @@ function ArticleEditContent({article}){
     const [formContent, setFormContent] = useState(article.articleContent)
     const [formPicture, setFormPicture] = useState(article.articlePicture)
     const [formPictureCredit, setFormPictureCredit] = useState(article.articlePictureCredit)
-    const URL = `https://localhost:44356/api/NewsArticles/${ID}`
+    const URL = `https://localhost:5001/api/NewsArticles/${ID}`
 
     useEffect(() => {
         setFormTitle(article.articleTitle)

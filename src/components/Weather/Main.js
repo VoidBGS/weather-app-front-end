@@ -5,7 +5,7 @@ import {Row, Col} from 'react-bootstrap'
 
 const Main = () =>{
 
-
+    const API_KEY = process.env.REACT_APP_OPENWEATHER_KEY
     const [weather, setWeather] = useState({});
     const [temperature, setTemperature] = useState({});
     const [wind, setWind] = useState({});
@@ -13,7 +13,6 @@ const Main = () =>{
 
 
     const currentWeather = async () =>{
-        const API_KEY = process.env.REACT_APP_OPENWEATHER_KEY
         const URL = `https://api.openweathermap.org/data/2.5/weather?lat=51.441643&lon=5.478000&apikey=${API_KEY}&units=metric`;
             axios.get(URL).then(function (response){
             setWeather(response.data.weather[0]);

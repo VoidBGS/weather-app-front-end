@@ -12,7 +12,7 @@ const Article = ({match}) =>{
    }, [])
 
   const ID = match.params.id;
-  const URL = `https://localhost:44356/api/NewsArticles/${ID}`
+  const URL = `https://localhost:5001/api/NewsArticles/${ID}`
 
   const [article, setArticle] = useState({})
 

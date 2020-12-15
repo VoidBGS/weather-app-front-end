@@ -8,7 +8,7 @@ const NewsForm = () => {
     const [validated, setValidated] = useState(false);
     const [isLoading, setLoading] = useState(false);
     const [formData, setFormData] = useState(initialInputState)
-    const URL = "https://localhost:44356/api/NewsArticles"
+    const URL = "https://localhost:5001/api/NewsArticles"
 
     const HandleInputChange = (e) =>{
       setFormData({...formData, [e.target.name]: e.target.value});

@@ -11,7 +11,7 @@ const ArticleEdit = ({match}) =>{
 
     const [article, setArticle] = useState({})
    
-    const URL = `https://localhost:44356/api/NewsArticles/${match.params.id}`
+    const URL = `https://localhost:5001/api/NewsArticles/${match.params.id}`
 
     const getArticle = async (id) =>{
         const response = await axios.get(URL)

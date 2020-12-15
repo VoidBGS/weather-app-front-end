@@ -9,7 +9,7 @@ const ArticleContent = ({article}) => {
 
     return(
         <Row>
-            <div className="article-content-text">
+            <div className="article-content-text bold">
                 <ArticleInfo article={{ article }} />
                 {formatContent(articleContent)}
             </div>

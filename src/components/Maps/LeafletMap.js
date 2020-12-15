@@ -45,7 +45,7 @@ const LeafletMap = () => {
                         url="https://c.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     />
                      <LayersControl.BaseLayer checked name="Temperature">
-                            <TileLayer url={URL} zIndex={10} opacity={100} />
+                            <TileLayer url={URL_TEMP} zIndex={10} opacity={100} />
                         </LayersControl.BaseLayer>
                         <LayersControl.BaseLayer name="Wind">
                             <TileLayer url={URL_WIND} zIndex={10} opacity={100}/>

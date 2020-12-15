@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap'
 
 const ArticleDeleteButton = ({ article }) => {
   const [isLoading, setLoading] = useState(false);
-  const URL = `https://localhost:44356/api/NewsArticles/${article.id}`
+  const URL = `https://localhost:5001/api/NewsArticles/${article.id}`
 
   const handleClick = () => setLoading(true);
 

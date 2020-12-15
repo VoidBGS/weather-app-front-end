@@ -5,7 +5,7 @@ import axios from 'axios'
 
 const ImageSection = () =>{
     const [pictures, setPictures] = useState([]);
-    const URL = "https://localhost:44356/api/Pictures" 
+    const URL = "https://localhost:5001/api/Pictures" 
 
      async function getPictures(){
         const data  = await axios.get(URL).then(function (response){
