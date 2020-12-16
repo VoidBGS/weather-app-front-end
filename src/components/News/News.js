@@ -15,19 +15,19 @@ const News = () =>{
      
      const callAPI = async () =>{
      const {data} = await getArticles();
-      if(data != undefined){
+      if(data != undefined ){
       setArticles(data);
       }
     }
     
-    return articles ? (
+    return articles[0] ? (
       <>
         <Row className="justify-content-center"  >
-              <NewsTitle />
+          <NewsTitle />
         </Row>
         <Col className="news-article-background py-4 my-4">
           {sessionStorage.getItem('Token') ? (
-          <Button variant="warning" size="lg" href="News/Post" className="news-button ml-5">Post Article</Button>
+            <Button variant="warning" size="lg" href="News/Post" className="news-button ml-5">Post Article</Button>
           ) : null}
           {articles.map(article => (
             <div key={article.id}>
@@ -36,7 +36,14 @@ const News = () =>{
           ))}
         </Col>
       </>
-    ) : null
+    ) : (
+        <>
+          <Row className="justify-content-center">
+            <NewsTitle />
+          </Row>
+          <Col className="news-loading py-4 my-4"></Col>
+        </>
+    )
 }
 
 export default News;

@@ -12,17 +12,17 @@ const Article = ({match}) =>{
    }, [])
 
   const ID = match.params.id;
-  const URL = `https://localhost:5001/api/NewsArticles/${ID}`
+  const URL = process.env.REACT_APP_API_URL
 
   const [article, setArticle] = useState({})
 
     const getArticle = async (id) =>{
-    const response = await axios.get(URL)
+    const response = await axios.get(URL + `/api/NewsArticles/${ID}`)
     .then(function (response){
       setArticle(response.data);
     }).catch(function (error) {
       console.error(error);
-      window.location.replace(`http://localhost:3000/NotFound`)
+      window.location.replace(`/NotFound`)
     })
    }
 
@@ -33,7 +33,10 @@ const Article = ({match}) =>{
         <ArticleContent article={article} />
       </Col>
     </>
-  ) : null
+  ) : (
+    <Col md={{ span: 11, offset: 0.9 }} className="article-loading p-4 ml-5">
+    </Col>
+  )
 }
 
 export default Article

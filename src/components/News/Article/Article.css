@@ -35,3 +35,7 @@
     right: 0;
     display: block;
 }
+.article-loading{
+    background-color: #fff;
+    height:700px;
+}

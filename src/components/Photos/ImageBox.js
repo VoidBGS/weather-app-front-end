@@ -1,5 +1,5 @@
 import React from 'react'
-import { Col } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 
 const ImageBox = ({picture}) =>{
     console.log(picture)
@@ -10,7 +10,24 @@ const ImageBox = ({picture}) =>{
                 <p className="p-3">{picture.authorName}</p>
             </div>
         </Col>
-    ) : null
+    ) : (
+        <>
+        <Row>
+        <Col lg={{ span: 4 }} >
+        <div className="image-box-loading m-3">
+        </div>
+        </Col>
+        <Col lg={{ span: 4 }} >
+        <div className="image-box-loading m-3">
+        </div>
+        </Col>
+        <Col lg={{ span: 4 }} >
+        <div className="image-box-loading m-3">
+        </div>
+        </Col>
+        </Row>
+        </>
+    )
 }
 
 export default ImageBox;

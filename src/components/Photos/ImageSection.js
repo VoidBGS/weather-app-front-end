@@ -19,7 +19,7 @@ const ImageSection = () =>{
         getPictures()
       }, [pictures]);
 
-    return(
+    return pictures[0] ? (
         <Row>
              {pictures.map(picture => (
             <div key={picture.id}>
@@ -27,6 +27,14 @@ const ImageSection = () =>{
             </div>
           ))}
         </Row>
+    ) : (
+      <>
+       <Row>
+            <div >
+               <ImageBox picture={null}/>
+            </div>
+        </Row>
+      </>
     )
 }
 
