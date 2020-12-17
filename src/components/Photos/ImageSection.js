@@ -20,7 +20,7 @@ const ImageSection = () =>{
       }, [pictures]);
 
     return pictures[0] ? (
-        <Row>
+        <Row className="ml-4 pl-2">
              {pictures.map(picture => (
             <div key={picture.id}>
                <ImageBox picture={picture}/>

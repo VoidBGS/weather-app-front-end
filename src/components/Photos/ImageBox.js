@@ -6,13 +6,13 @@ const ImageBox = ({picture}) =>{
     return picture ?(
         <Col lg={{ span: 4 }} >
             <div className="image-box">
-                <img src={picture.link} alt="Problem with loading" style={{ width: '340px', height: '235px' }}></img>
+                <img src={picture.link} alt="Problem with loading" style={{ width: '320px', height: '235px' }}></img>
                 <p className="p-3">{picture.authorName}</p>
             </div>
         </Col>
     ) : (
         <>
-        <Row>
+        <Row className="mr-3">
         <Col lg={{ span: 4 }} >
         <div className="image-box-loading m-3">
         </div>
