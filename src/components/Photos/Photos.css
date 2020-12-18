@@ -8,9 +8,23 @@
     box-shadow: 0px 3px 9px #764400;
     width: fit-content;
     background-color: #ffffff;
+    text-decoration: none;
+}
+.image-box:hover{
+    box-shadow: 1px 5px 19px #000000;
+    transition: box-shadow .2s ease-in-out;
+    color:#3b3b3b;
+}
+.image-box p{
+    color:#0F0E0B;
+    text-decoration: none;
 }
 .picture-image-upload-wrapper{
     width: 90%;
+}
+.image-box-text{
+    text-decoration: none;
+    color:#ffffff;
 }
 .picture-upload-button{
     background-color: #0F0E0B;

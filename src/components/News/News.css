@@ -7,7 +7,6 @@
     display: flex;
     font-size: 16pt;
     color: #221f1c;
-    text-decoration: none;
 }
 .news-article-content-row{
     position: absolute;
@@ -16,7 +15,7 @@
 .news-article:hover{
     box-shadow: 1px 5px 19px #000000;
     transition: box-shadow .2s ease-in-out;
-  }
+}
 .news-title{
     font-family: Signika Negative; font-size: 45pt; font-style: normal; font-variant: normal; font-weight: 350; line-height: 26.4px;
     padding: 30px;
@@ -46,7 +45,6 @@
     box-shadow: 0px 3px 9px #764400;
 }
 .news-page a{
-    text-decoration: none;
     color: #000000
 }
 .news-button{

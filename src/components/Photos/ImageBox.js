@@ -7,7 +7,7 @@ const ImageBox = ({picture}) =>{
         <Col lg={{ span: 4 }} >
             <div className="image-box">
                 <img src={picture.link} alt="Problem with loading" style={{ width: '320px', height: '235px' }}></img>
-                <p className="p-3">{picture.authorName}</p>
+                <p className="image-box-text p-2">{picture.authorName}</p>
             </div>
         </Col>
     ) : (
