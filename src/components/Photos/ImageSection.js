@@ -24,7 +24,7 @@ const ImageSection = () => {
     <Row className="picture-content ml-4 pl-2">
       {pictures.map(picture => (
         <div key={picture.id}>
-          <Link to={`News/Article/${picture.id}`} style={{ textDecoration: 'none' }}><ImageBox picture={picture} /></Link>
+          <Link to={`Photos/${picture.id}`} style={{ textDecoration: 'none' }}><ImageBox picture={picture} /></Link>
         </div>
       ))}
     </Row>
