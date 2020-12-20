@@ -30,8 +30,8 @@ const News = () =>{
             <Button variant="warning" size="lg" href="News/Post" className="news-button ml-5">Post Article</Button>
           ) : null}
           {articles.map(article => (
-            <div key={article.id}>
-              <Link to={`News/Article/${article.id}`}>{NewsBox(article)}</Link>
+            <div className="m-5" key={article.id}>
+              <Link  style={{ textDecoration: 'none' }} to={`News/Article/${article.id}`}>{NewsBox(article)}</Link>
             </div>
           ))}
         </Col>

@@ -3,13 +3,8 @@
     box-shadow: 0px 3px 9px #764400;
     border-radius: 4px;
 }
-.news-article.content{
-    display: flex;
-    font-size: 16pt;
-    color: #221f1c;
-}
-.news-article-content-row{
-    position: absolute;
+.news-article-content{
+    font-size: 1.5rem;
     color: #221f1c;
 }
 .news-article:hover{

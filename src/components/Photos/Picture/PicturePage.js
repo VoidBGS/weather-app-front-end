@@ -5,7 +5,7 @@ import axios from 'axios'
 
 export default function PicturePage() {
     let {id} = useParams();
-    const [picture , setPicture] = useState({})
+    const [picture , setPicture] = useState(null)
     const URL = process.env.REACT_APP_API_URL;
 
     const getPicture = async (id) =>{
@@ -35,7 +35,7 @@ export default function PicturePage() {
         </Col>
     ) : (
         <Row className="justify-content-center">
-          <Col className="picture-loading"></Col>
-          </Row>
+            <div className="picture-loading mb-4"></div>
+        </Row>
     )
 }
