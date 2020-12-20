@@ -6,7 +6,7 @@ import axios from 'axios'
 
 export default function UploadPicture() {
     const [isLoading, setLoading] = useState(false);
-    const URL = 'https://api.cloudinary.com/v1_1/dvmozl1yt'
+    const URL = process.env.REACT_APP_CLOUDINARY_URL;
     const [validated, setValidated] = useState(false);
     const [picture, setPicture] = useState([])
     let history = useHistory();

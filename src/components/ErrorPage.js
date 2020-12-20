@@ -11,7 +11,7 @@ const ErrorPage  = () =>{
             <Col>
                 <div className="error-page-message p-5">
                     <p><strong>Oops!</strong><br></br>
-             We could not find the page you were looking for :(</p>
+                     We could not find the page you were looking for :(</p>
                 </div>
             </Col>
         </Row>

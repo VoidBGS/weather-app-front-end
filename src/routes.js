@@ -10,7 +10,7 @@ import ArticleEdit from './components/News/Edit/ArticleEdit'
 import Register from './components/Register/Register'
 import Login from './components/Login/Login'
 import UploadPicture from './components/Photos/Form/UploadPicture'
-import PicturePage from './components/Photos'
+import PicturePage from './components/Photos/Picture/PicturePage'
 import Signout from './components/Signout'
 import ErrorPage from './components/ErrorPage'
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";

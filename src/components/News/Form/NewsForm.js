@@ -40,7 +40,7 @@ const NewsForm = () => {
         ).then(function (response){
             console.log(response);
             setLoading(false)
-            window.location.replace('http://localhost:3000/News')
+            window.location.replace('/News')
           }).catch(function (error) {
             console.error(error);
           })

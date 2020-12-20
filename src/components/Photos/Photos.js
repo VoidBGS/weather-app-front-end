@@ -8,10 +8,10 @@ const Photos = () =>{
     return(
         <>
             <Row className="justify-content-center"  >
-              <PhotosTitle />
+                <PhotosTitle />
             </Row>
             {sessionStorage.getItem('Token') ? (
-            <Button variant="warning" size="lg" href="Photos/Upload" className="upload-page-button ml-5 mb-3">Post Picture Of The Day</Button>
+                <Button variant="warning" size="lg" href="Photos/Upload" className="upload-page-button ml-5 mb-3">Post Picture Of The Day</Button>
             ) : null}
             <ImageSection />
         </>

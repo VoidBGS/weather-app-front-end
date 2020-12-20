@@ -63,7 +63,7 @@ function ArticleEditContent({article}){
         }
         ).then(function (response){
             setLoading(false)
-            window.location.replace(`http://localhost:3000/News/Article/${ID}`)
+            window.location.replace(`/News/Article/${ID}`)
           }).catch(function (error) {
             console.error(error);
           })

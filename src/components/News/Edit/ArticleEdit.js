@@ -28,7 +28,7 @@ const ArticleEdit = ({match}) =>{
           <>
             <ArticleEditForm article={article} />
             <ArticleDeleteButton article={article} />
-          </>) : window.location.replace('http://localhost:3000/News')
+          </>) : window.location.replace('/News')
             }
       </>
     ): null
