@@ -1,13 +1,13 @@
 import React, {useState} from 'react'
 import './Login.css'
 import axios from 'axios';
+import {setUser} from '../../user'
 import {Col, Button, Form, Alert, Spinner, Row} from 'react-bootstrap'
 const initialInputState = { email: "", password:""};
 
 const LoginForm = () =>{
     const [validated, setValidated] = useState(false);
     const [success, setSuccess] = useState(false);
-    const [invalid, setInvalid] = useState(true);
     const [formData, setFormData] = useState(initialInputState)
     const URL = process.env.REACT_APP_AUTH_URL
 
@@ -37,7 +37,7 @@ const LoginForm = () =>{
       ).then(function (response){
           console.log(response);
           sessionStorage.setItem("Token", response.data.token);
-          sessionStorage.setItem("Name", response.data.authorName)
+          setUser(response.data.authorName)
           setSuccess(true);
           setTimeout(function () {
             Redirect()

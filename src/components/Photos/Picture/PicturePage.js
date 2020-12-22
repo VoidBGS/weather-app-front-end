@@ -1,6 +1,7 @@
 import React,{useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 import {Col, Row} from 'react-bootstrap'
+import DeleteButton from './DeleteButton'
 import axios from 'axios'
 
 export default function PicturePage() {
@@ -30,6 +31,7 @@ export default function PicturePage() {
                     <Col className="picture-details">
                         <h4 className="p-3">{picture.authorName} - {picture.dateTimeCreated}</h4>
                     </Col>
+                    <DeleteButton id={id}/>
                 </div>
             </Row>
         </Col>
