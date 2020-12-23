@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import './ArticleEdit.css'
 import axios from 'axios'
 import ArticleEditForm from './ArticleEditForm'
+import {getUser} from '../../../user'
 import ArticleDeleteButton from  './ArticleDeleteButton'
 
 const ArticleEdit = ({match}) =>{
@@ -24,7 +25,7 @@ const ArticleEdit = ({match}) =>{
 
     return article ? (
       <>
-      {sessionStorage.getItem('Token') ? (
+      {sessionStorage.getItem('Name') ? (
           <>
             <ArticleEditForm article={article} />
             <ArticleDeleteButton article={article} />

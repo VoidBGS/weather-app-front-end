@@ -1,20 +1,20 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { Button } from 'react-bootstrap'
+import {getUser} from '../../../user'
 
 const ArticleDeleteButton = ({ article }) => {
   const [isLoading, setLoading] = useState(false);
   const URL = `https://localhost:5001/api/NewsArticles/${article.id}`
-
-  const handleClick = () => setLoading(true);
 
   const handleSubmit = async () => {
     if (window.confirm("Are you sure you want to delete this article?")) {
       let data = JSON.stringify({
         AuthorName: sessionStorage.getItem('Name'),
     });
-    
-      if (sessionStorage.getItem('Token') !== null) {
+
+      if (sessionStorage.getItem("Name") !== null) {
+           setLoading(true)
            await axios.delete(URL)
           .then(function (response) {
             console.log(response)

@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import './NewsArticleForm.css'
 import {Form, Button} from 'react-bootstrap'
 import axios from 'axios';
+import {getUser} from '../../../user'
 const initialInputState = { title: "", content: "", image:"", credit:""};
 
 const NewsForm = () => {
@@ -49,7 +50,7 @@ const NewsForm = () => {
         setValidated(true);
     };
 
-        return sessionStorage.getItem('Token') ? (
+        return sessionStorage.getItem('Name')  ? (
           <>
             <Form noValidate validated={validated} onSubmit={handleSubmit}>
               <Form.Group>

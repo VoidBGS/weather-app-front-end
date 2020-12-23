@@ -13,7 +13,7 @@ const Photos = () =>{
             <Row className="justify-content-center"  >
                 <PhotosTitle />
             </Row>
-            {getUser() ? (
+            {sessionStorage.getItem('Name') ? (
                 <Button variant="warning" size="lg" href="Photos/Upload" className="upload-page-button ml-5 mb-3">Post Picture Of The Day</Button>
             ) : null}
             <ImageSection />

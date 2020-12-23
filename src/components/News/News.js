@@ -4,6 +4,7 @@ import NewsBox from './NewsBox'
 import {getArticles} from './getArticles'
 import NewsTitle from './NewsTitle'
 import {Link} from "react-router-dom";
+import {getUser} from '../../user'
 import {Row, Col, Button} from 'react-bootstrap'
 
 const News = () =>{
@@ -19,14 +20,14 @@ const News = () =>{
       setArticles(data);
       }
     }
-    
+    console.log(getUser())
     return articles[0] ? (
       <>
         <Row className="justify-content-center"  >
           <NewsTitle />
         </Row>
         <Col className="news-article-background py-4 my-4">
-          {sessionStorage.getItem('Token') ? (
+          {sessionStorage.getItem('Name') ? (
             <Button variant="warning" size="lg" href="News/Post" className="news-button ml-5">Post Article</Button>
           ) : null}
           {articles.map(article => (
