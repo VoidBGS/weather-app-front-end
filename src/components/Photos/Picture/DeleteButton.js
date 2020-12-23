@@ -8,6 +8,7 @@ export default function DeleteButton({id}) {
     const [isLoading, setLoading] = useState(false);
 
     const handleSubmit = (event) =>{
+        if (window.confirm("Are you sure you want to delete this article?")) {
         setLoading(true);
         event.preventDefault();
         console.log(id)
@@ -18,6 +19,7 @@ export default function DeleteButton({id}) {
             setLoading(false);
             console.log(error);
         })
+    }
     }
 
     return (

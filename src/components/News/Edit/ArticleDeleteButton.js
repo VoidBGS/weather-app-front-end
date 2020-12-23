@@ -9,10 +9,6 @@ const ArticleDeleteButton = ({ article }) => {
 
   const handleSubmit = async () => {
     if (window.confirm("Are you sure you want to delete this article?")) {
-      let data = JSON.stringify({
-        AuthorName: sessionStorage.getItem('Name'),
-    });
-
       if (sessionStorage.getItem("Name") !== null) {
            setLoading(true)
            await axios.delete(URL)
