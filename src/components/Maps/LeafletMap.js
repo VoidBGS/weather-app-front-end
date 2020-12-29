@@ -31,7 +31,7 @@ const LeafletMap = () => {
     }
 
     return (
-        <Col>
+        <div>
         <div className="infra-sat-map-wrapper m-4">
         <ToggleButtonGroup type="radio" name="options" defaultValue={"4"} onChange={HandleChange}>
              <ToggleButton variant="light" className="map-button" value={"12"}>Eindhoven</ToggleButton>
@@ -56,7 +56,7 @@ const LeafletMap = () => {
                 </LayersControl>
             </MapContainer>
         </div>
-    </Col>
+    </div>
     )
 }
 
