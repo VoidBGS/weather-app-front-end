@@ -102,7 +102,7 @@ const RegisterForm = () =>{
             </Row>
           </Alert>
           <p className="sign-up p-3 ml-2"><a href="/Login">Already have an account? Click here!</a></p>
-          <Button variant="dark" size="lg" type="submit" disabled={isLoading} onClick={!isLoading ? handleClick : null} className="register-form-button my-3 mb-2"> {isLoading ? 'Loading…' : 'Sign Up'}</Button>
+          <Button variant="dark" data-testid="register-form-button" size="lg" type="submit" disabled={isLoading} onClick={!isLoading ? handleClick : null} className="register-form-button my-3 mb-2"> {isLoading ? 'Loading…' : 'Sign Up'}</Button>
         </Form>
       </Col>
 

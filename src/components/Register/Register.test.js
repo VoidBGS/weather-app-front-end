@@ -23,5 +23,8 @@ describe("Registering a user", () => {
     const confirmInput = screen.getByTestId('register-form-confirm');
     fireEvent.change(confirmInput, { target: { value: "i!88888888" } } );
     expect(confirmInput.value).toBe("i!88888888");
+
+    const registerButton = screen.getByTestId('register-form-button');
+    fireEvent.click(registerButton);
   });
 });
