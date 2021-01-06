@@ -1,12 +1,27 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import {  render, screen, fireEvent, } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import Register from './Register';
+import RegisterForm from './RegisterForm'
 
-test('Deploys Register Page', () => {
-    const { getByTestId } = render(<Register />);
-  
-    const registerPageContainer = getByTestId('register-page-test');
-  
-    expect(registerPageContainer).toBeInTheDocument();
+
+describe("Registering a user", () => {
+  test("userRegister", async () => {
+    render(<RegisterForm/>);
+
+    const nameInput = screen.getByTestId('register-form-name');
+    fireEvent.change(nameInput, {target:{ value: "TestingGuy" } } );
+    expect(nameInput.value).toBe("TestingGuy");
+
+    const emailInput =  screen.getByTestId('register-form-email');
+    fireEvent.change(emailInput, { target: {value:"TestingGuy@gmail.com" } });
+    expect(emailInput.value).toBe("TestingGuy@gmail.com");
+
+    const passwordInput = screen.getByTestId('register-form-password');
+    fireEvent.change(passwordInput, { target: { value: "i!88888888" } } );
+    expect(passwordInput.value).toBe("i!88888888");
+
+    const confirmInput = screen.getByTestId('register-form-confirm');
+    fireEvent.change(confirmInput, { target: { value: "i!88888888" } } );
+    expect(confirmInput.value).toBe("i!88888888");
   });
+});

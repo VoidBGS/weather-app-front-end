@@ -9,6 +9,7 @@
 }
 .infra-sat-map{
     width: 100%;
+    justify-content: center;
 }
 .infra-sat-map-wrapper{
     width: 1000px;

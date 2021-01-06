@@ -73,22 +73,22 @@ const RegisterForm = () =>{
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
           <Form.Group>
             <Form.Row className="register-form-text justify-content-center pt-4"><Form.Label>Name</Form.Label></Form.Row>
-            <Form.Control required size="md" name="username" type="text" onChange={HandleInputChange} className="register-form-input" minLength="1" maxLength="30"></Form.Control>
+            <Form.Control required size="md" data-testid="register-form-name"  name="username" type="text" onChange={HandleInputChange} className="register-form-input" minLength="1" maxLength="30"></Form.Control>
             <Form.Control.Feedback type="invalid" className="feedback">Name should not be empty or over 30 characters!</Form.Control.Feedback>
           </Form.Group>
           <Form.Group>
             <Form.Row className="register-form-text justify-content-center pt-1"><Form.Label>Email</Form.Label></Form.Row>
-            <Form.Control required size="md" name="email" type="email" onChange={HandleInputChange} className="register-form-input" minLength="10" maxLength="40" />
+            <Form.Control required size="md" name="email" type="email" data-testid="register-form-email" onChange={HandleInputChange} className="register-form-input" minLength="10" maxLength="40" />
             <Form.Control.Feedback type="invalid" className="feedback">Email should not be empty or over 40 characters!</Form.Control.Feedback>
           </Form.Group>
           <Form.Group>
             <Form.Row className="register-form-text justify-content-center pt-1"><Form.Label>Password</Form.Label></Form.Row>
-            <Form.Control required size="md" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" name="password" type="password" onChange={HandleInputChange} className="register-form-input" minLength="8" maxLength="30" />
+            <Form.Control required size="md" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" data-testid="register-form-password" name="password" type="password" onChange={HandleInputChange} className="register-form-input" minLength="8" maxLength="30" />
             <Form.Control.Feedback type="invalid" className="feedback">Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character!</Form.Control.Feedback>
           </Form.Group>
           <Form.Group>
             <Form.Row className="register-form-text justify-content-center pt-1"><Form.Label>Confirm Password</Form.Label></Form.Row>
-            <Form.Control required size="md" name="confirmPassword" type="password" onChange={HandleInputChange} className="register-form-input" minLength="8" maxLength="30" />
+            <Form.Control required size="md" name="confirmPassword" type="password" onChange={HandleInputChange} data-testid="register-form-confirm" className="register-form-input" minLength="8" maxLength="30" />
             <Form.Control.Feedback type="invalid" className="feedback">Password should not be empty or under 8 characters!</Form.Control.Feedback>
           </Form.Group>
           <Alert variant="success" show={success}>

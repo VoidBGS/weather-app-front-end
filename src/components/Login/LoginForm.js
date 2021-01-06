@@ -62,12 +62,12 @@ const LoginForm = () =>{
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
           <Form.Group>
             <Form.Row className="login-form-text justify-content-center pt-5"><Form.Label>Email</Form.Label></Form.Row>
-            <Form.Control required size="md" name="email" type="email" onChange={HandleInputChange} className="login-form-input" minLength="10" maxLength="40" />
+            <Form.Control required size="md" data-testid="login-form-email" name="email" type="email" onChange={HandleInputChange} className="login-form-input" minLength="10" maxLength="40" />
             <Form.Control.Feedback type="invalid" className="feedback">Email should not be empty or over 40 characters!</Form.Control.Feedback>
           </Form.Group>
           <Form.Group>
             <Form.Row className="login-form-text justify-content-center pt-1"><Form.Label>Password</Form.Label></Form.Row>
-            <Form.Control required size="md" name="password" type="password" onChange={HandleInputChange} className="login-form-input" minLength="8" maxLength="30" />
+            <Form.Control required size="md" data-testid="login-form-password" name="password" type="password" onChange={HandleInputChange} className="login-form-input" minLength="8" maxLength="30" />
             <Form.Control.Feedback type="invalid" className="feedback">Password should not be empty or under 8 characters!</Form.Control.Feedback>
           </Form.Group>
           <Alert variant="success" show={success}>
@@ -75,13 +75,13 @@ const LoginForm = () =>{
               <b>Success!</b>
             </Alert.Heading>
             <Row className="pl-3">
-              <p>You have logged in successfully. Welcome!</p>
+              <p data-testid="login-form-success">You have logged in successfully. Welcome!</p>
               <p><i>Redirecting</i></p>
               <Spinner animation="border" size="sm" role="status" className="mt-2 ml-2">
               </Spinner>
             </Row>
           </Alert>
-          <Button variant="dark" size="lg" type="submit" disabled={isLoading} onClick={!isLoading ? handleClick : null} className="login-form-button my-3"> {isLoading ? 'Loading…' : 'Sign In'}</Button>
+          <Button data-testid="login-form-button" variant="dark" size="lg" type="submit" disabled={isLoading} onClick={!isLoading ? handleClick : null} className="login-form-button my-3"> {isLoading ? 'Loading…' : 'Sign In'}</Button>
         </Form>
       </Col>
     </>
