@@ -93,7 +93,7 @@ const RegisterForm = () =>{
           </Form.Group>
           <Alert variant="success" show={success}>
             <Alert.Heading>
-              <b>Success!</b>
+              <b data-testid="register-form-success" >Success!</b>
             </Alert.Heading>
             <Row className="pl-3">
               <p><i>Redirecting</i></p>

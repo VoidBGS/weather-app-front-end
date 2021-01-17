@@ -37,7 +37,7 @@ export default function UploadPicture() {
             Link: link,
         });
 
-        axios.post("https://localhost:44356/api/Pictures", data, {
+        axios.post("https://localhost:5001/api/Pictures", data, {
             headers: {
                 'Content-Type': 'application/json'
                 }

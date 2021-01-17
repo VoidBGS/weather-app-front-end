@@ -1,5 +1,5 @@
 import React from 'react';
-import {  render, screen, fireEvent, } from '@testing-library/react';
+import {  render, screen, fireEvent, toBeInTheDocument} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import RegisterForm from './RegisterForm'
 
@@ -26,5 +26,7 @@ describe("Registering a user", () => {
 
     const registerButton = screen.getByTestId('register-form-button');
     fireEvent.click(registerButton);
+    const successMessage = await screen.findByText("Success");
+    expect(successMessage).toBeInTheDocument();
   });
 });
